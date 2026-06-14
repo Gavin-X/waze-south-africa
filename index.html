@@ -3,1064 +3,426 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wazeopedia South Africa | Complete Knowledge Hub & Blueprint</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <style>
-        ::-webkit-scrollbar { width: 6px; height: 6px; }
-        ::-webkit-scrollbar-track { background: #f1f5f9; }
-        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
-        ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
-    </style>
+    <title>Waze Map Editor - South Africa Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body class="bg-slate-50 text-slate-800 font-sans antialiased flex flex-col min-h-screen">
+<body class="bg-gray-50 text-gray-800 font-sans antialiased">
 
-    <header class="sticky top-0 z-50 bg-white border-b border-slate-200 shadow-xs px-4 py-3 flex justify-between items-center">
-        <div class="flex items-center gap-3">
-            <div class="bg-[#33ccff] text-white font-black px-2.5 py-1 rounded-lg tracking-wider text-sm shadow-xs">ZA-WME</div>
-            <div>
-                <h1 class="text-base font-bold leading-tight">Wazeopedia South Africa</h1>
-                <p class="text-xs text-slate-500">Community Resource & Blueprint Hub</p>
+    <header class="sticky top-0 z-50 bg-slate-900 text-white shadow-md border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <i class="fa-solid fa-map-location-dot text-amber-400 text-2xl"></i>
+                <span class="text-xl font-bold tracking-tight">Waze Map Editor <span class="text-amber-400 font-medium text-sm px-2 py-0.5 rounded bg-slate-800 ml-1">ZA Edition</span></span>
             </div>
-        </div>
-        <div class="flex items-center gap-2">
-            <a href="https://waze.com/editor" target="_blank" class="bg-[#33ccff] hover:bg-[#2cb2df] text-white font-medium text-xs px-3 py-2 rounded-md transition-colors shadow-xs">
-                Open WME
-            </a>
+            <div class="relative w-64">
+                <span class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                    <i class="fa-solid fa-magnifying-glass text-gray-400 text-sm"></i>
+                </span>
+                <input type="text" id="searchInput" placeholder="Search documentation..." class="w-full pl-9 pr-4 py-1.5 bg-slate-800 border border-slate-700 rounded-md text-sm text-white placeholder-gray-400 focus:outline-none focus:border-amber-400 transition-colors">
+            </div>
         </div>
     </header>
 
-    <div class="flex flex-1 max-w-7xl w-full mx-auto relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex gap-8">
         
-        <aside class="hidden md:block w-72 shrink-0 border-r border-slate-200 p-6 h-[calc(100vh-61px)] sticky top-[61px] overflow-y-auto bg-white/50 backdrop-blur-xs">
-            <div class="mb-6">
-                <p class="text-xs font-bold uppercase tracking-wider text-[#2cb2df] mb-2">The Community Blueprint</p>
-                <nav class="space-y-1">
-                    <a href="#blueprint-impact" class="block text-sm py-1.5 px-3 rounded-md text-slate-600 hover:bg-slate-100 transition-colors">Why It Matters</a>
-                    <a href="#blueprint-fear" class="block text-sm py-1.5 px-3 rounded-md text-slate-600 hover:bg-slate-100 transition-colors">How Not to Break SA</a>
-                    <a href="#blueprint-investigation" class="block text-sm py-1.5 px-3 rounded-md text-slate-600 hover:bg-slate-100 transition-colors">The Investigation Framework</a>
-                    <a href="#blueprint-fix" class="block text-sm py-1.5 px-3 rounded-md text-slate-600 hover:bg-slate-100 transition-colors">How to Fix Things</a>
-                    <a href="#blueprint-advanced" class="block text-sm py-1.5 px-3 rounded-md text-slate-600 hover:bg-slate-100 transition-colors">How to Improve Things</a>
-                    <a href="#blueprint-mentor" class="block text-sm py-1.5 px-3 rounded-md text-slate-600 hover:bg-slate-100 transition-colors">The Mentor Track</a>
-                </nav>
-            </div>
-
-            <div class="border-t border-slate-100 pt-4 mb-6">
-                <p class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Core Reference Guide</p>
-                <nav class="space-y-1">
-                    <a href="#welcome" class="block text-sm py-1.5 px-3 rounded-md text-slate-600 hover:bg-slate-100 transition-colors">Page 1 | Welcome & Getting Started</a>
-                    <a href="#interface" class="block text-sm py-1.5 px-3 rounded-md text-slate-600 hover:bg-slate-100 transition-colors">Page 2 | The Waze Map Editor (WME)</a>
-                    <a href="#road-types" class="block text-sm py-1.5 px-3 rounded-md text-slate-600 hover:bg-slate-100 transition-colors">Page 3 | Road Types, Naming & Speed Limits</a>
-                    <a href="#editing" class="block text-sm py-1.5 px-3 rounded-md text-slate-600 hover:bg-slate-100 transition-colors">Page 4 | Creating and Editing Roads</a>
-                    <a href="#locking" class="block text-sm py-1.5 px-3 rounded-md text-slate-600 hover:bg-slate-100 transition-colors">Page 5 | Locking, Places, Toll Roads & Roles</a>
-                    <a href="#best-practices" class="block text-sm py-1.5 px-3 rounded-md text-slate-600 hover:bg-slate-100 transition-colors">Page 6 | Best Practices & Edits to Avoid</a>
-                </nav>
-            </div>
-        </aside>
-
-        <main class="flex-1 p-4 sm:p-8 lg:p-12 overflow-x-hidden max-w-4xl">
-            
-            <section id="blueprint-impact" class="scroll-mt-20 mb-16">
-                <div class="border-b border-slate-200 pb-4 mb-6">
-                    <span class="text-xs font-bold text-[#2cb2df] uppercase tracking-wider font-mono">Blueprint | Module 1</span>
-                    <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight mt-1 text-slate-900">Why It Matters (The Real-World Impact)</h2>
-                </div>
-                <p class="mb-4 leading-relaxed text-slate-600 font-semibold">Before we touch a single pixel, why are we here? Waze isn't a video game; it impacts real South Africans daily.</p>
-                <div class="space-y-4 text-sm text-slate-600 mb-6">
-                    <p><strong>Emergency Services & Safety:</strong> How an accurate Waze map routes ambulances past informal settlements or through complex gated estates when seconds count.</p>
-                    <p><strong>The School Run & Commuter Chaos:</strong> Real-world impact of optimizing residential street routing vs. primary suburbs during peak traffic.</p>
-                    <p><strong>The Cost of Commuting:</strong> Why marking toll roads (like traditional plazas or remaining e-toll gantries) and unpaved roads correctly saves drivers money and vehicle wear-and-tear.</p>
-                </div>
-                <div class="bg-slate-900 text-slate-100 p-5 rounded-xl shadow-md">
-                    <span class="text-xs font-bold text-[#33ccff] uppercase tracking-wider font-mono block mb-1">Case Study: The Gated Estate Trap</span>
-                    <p class="text-sm leading-relaxed text-slate-300">What happens when Waze tries to route a delivery driver through a resident-only back gate of an estate like Dainfern or Woodmead because an editor left it open?</p>
-                </div>
-            </section>
-
-            <section id="blueprint-fear" class="scroll-mt-20 mb-16">
-                <div class="border-b border-slate-200 pb-4 mb-6">
-                    <span class="text-xs font-bold text-[#2cb2df] uppercase tracking-wider font-mono">Blueprint | Module 2</span>
-                    <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight mt-1 text-slate-900">How Not to Break South Africa (The Fear Barrier)</h2>
-                </div>
-                <p class="mb-4 text-slate-600">The number one reason new editors quit is the fear of making a mistake. Let's conquer that. Spoiler alert: Everybody breaks something eventually.</p>
-                <div class="space-y-4 text-sm text-slate-600 mb-6">
-                    <p><strong>The Guardian Mindset:</strong> Your goal on Day 1 isn't to build a new highway; it's to observe and maintain safely.</p>
-                    <p><strong>The "Hall of Shame" (Normalized Mistakes):</strong> Real examples from senior South African editors showing things they broke when they started, and how easily they were fixed.</p>
-                    <p><strong>The Golden Rule of Connectivity:</strong> Never blindly connect non-drivable segments (Walking Trails, Pedestrian Boardwalks, Railroads) to the drivable road network. If you do, Waze will try to route a VW Polo down a railway line.</p>
-                    <p><strong>Red Means "Stop and Check":</strong> Understanding that red segments in the editor mean "unconfirmed"—they need a proper name and road type before they can route traffic.</p>
-                </div>
-            </section>
-
-            <section id="blueprint-investigation" class="scroll-mt-20 mb-16">
-                <div class="border-b border-slate-200 pb-4 mb-6">
-                    <span class="text-xs font-bold text-[#2cb2df] uppercase tracking-wider font-mono">Blueprint | Module 3</span>
-                    <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight mt-1 text-slate-900">The Investigation Framework (Routing Detective Work)</h2>
-                </div>
-                <p class="mb-4 text-slate-600 font-semibold">Don't just edit. Investigate. Before you change a road, you need to understand why Waze is doing what it's doing.</p>
-                <h3 class="text-base font-bold mb-3 text-slate-900">The 5-Step Troubleshooting Workflow:</h3>
-                <ul class="list-disc list-inside space-y-2 text-sm text-slate-600 mb-6">
-                    <li><strong>GPS Tracks:</strong> Turn on raw GPS tracks in WME to see where cars are actually driving.</li>
-                    <li><strong>LiveMap:</strong> Check how the live routing engine calculates a route over the problem area.</li>
-                    <li><strong>Street View & Local Reality:</strong> Verify signage, lanes, and physical restrictions.</li>
-                    <li><strong>Community Consultation:</strong> Drop a message in the community if the logic seems strange.</li>
-                    <li><strong>The Edit:</strong> Only make the change once the evidence aligns.</li>
-                </ul>
-                <div class="bg-amber-50 border-l-4 border-amber-500 p-4 rounded-r-lg text-sm text-amber-900">
-                    <strong class="block mb-0.5">Case Study: The Ghost Turn</strong>
-                    Why Waze is telling users to take a dangerous right turn across three lanes of traffic, and how to spot the missing Red Turn Restriction Arrow in the editor.
-                </div>
-            </section>
-
-            <section id="blueprint-fix" class="scroll-mt-20 mb-16">
-                <div class="border-b border-slate-200 pb-4 mb-6">
-                    <span class="text-xs font-bold text-[#2cb2df] uppercase tracking-wider font-mono">Blueprint | Module 4</span>
-                    <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight mt-1 text-slate-900">How to Fix Things (The Bread & Butter Edits)</h2>
-                </div>
-                <p class="mb-4 text-slate-600 font-semibold">Now that you know how to investigate, here is how you safely repair common issues without changing road hierarchies.</p>
-                <h3 class="text-base font-bold mb-2 text-slate-900">Turn Restrictions & Directionality</h3>
-                <div class="space-y-3 text-sm text-slate-600 mb-6">
-                    <p><strong>The Arrows:</strong> Green means go; Red means restricted. Setting these accurately to match local municipal traffic signs prevents illegal/dangerous routing.</p>
-                    <p><strong>One-Way vs. Two-Way:</strong> Ensuring suburban backstreets allow dual-direction traffic while dual-carriageways/freeways are mapped as parallel one-way segments.</p>
-                </div>
-                <h3 class="text-base font-bold mb-2 text-slate-900">SA Naming Standards (TTS Optimization)</h3>
-                <p class="mb-4 text-sm text-slate-600">Waze speaks the road names out loud using Text-To-Speech (e.g., "Turn left into Elizabeth Ave").</p>
-                <div class="space-y-3 text-sm text-slate-600">
-                    <p><strong>The Suffix Rule:</strong> Always use the standard capitalized English abbreviations.<br>
-                    <span class="text-emerald-700 font-mono font-bold">Correct:</span> Elizabeth Ave, Main Rd, Smith St.<br>
-                    <span class="text-rose-700 font-mono font-bold">Incorrect:</span> Elizabeth Avenue, Main rd, Smith st.</p>
-                    <p><strong>The Localization Rule:</strong> Always include the Suburb/City name so traffic alerts say "Accident on Rivonia Rd, Sandton" rather than just an ambiguous "Accident on Rivonia Rd".</p>
-                </div>
-            </section>
-
-            <section id="blueprint-advanced" class="scroll-mt-20 mb-16">
-                <div class="border-b border-slate-200 pb-4 mb-6">
-                    <span class="text-xs font-bold text-[#2cb2df] uppercase tracking-wider font-mono">Blueprint | Module 5</span>
-                    <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight mt-1 text-slate-900">How to Improve Things (Advanced Layouts)</h2>
-                </div>
-                <p class="mb-4 text-slate-600">Moving into Capability-based milestones: From "Fixer" to "Builder".</p>
-                <div class="bg-white border border-slate-200 p-4 rounded-xl text-center text-sm font-mono font-bold text-slate-700 shadow-2xs mb-6">
-                    Explorer ➔ Fixer ➔ Builder ➔ Guardian ➔ Mentor ➔ Steward
-                </div>
-                <h3 class="text-base font-bold mb-2 text-slate-900">The South African Road Hierarchy</h3>
-                <p class="mb-4 text-sm text-slate-600">Waze uses standard dictionary/functional definitions for roads, not strictly legal ones.</p>
-                <div class="overflow-x-auto border border-slate-200 rounded-xl bg-white mb-6 text-xs">
-                    <table class="w-full text-left border-collapse">
-                        <thead>
-                            <tr class="bg-slate-50 border-b border-slate-200 text-slate-600 font-semibold">
-                                <th class="p-2.5">Road Type</th>
-                                <th class="p-2.5">Functional Role</th>
-                                <th class="p-2.5">Sign/Prefix</th>
-                                <th class="p-2.5">WME Rule</th>
-                            </tr>
-                        </thead>
-                        <tbody class="divide-y divide-slate-100 text-slate-600 font-medium">
-                            <tr>
-                                <td class="p-2.5 font-bold text-slate-900">Freeway</td>
-                                <td class="p-2.5">Fully controlled-access. No robots, no property driveways.</td>
-                                <td class="p-2.5">Pentagon (N1-N18), some R or M.</td>
-                                <td class="p-2.5">Must be two separate 1-way segments.</td>
-                            </tr>
-                            <tr>
-                                <td class="p-2.5 font-bold text-slate-900">Major Highway</td>
-                                <td class="p-2.5">High-traffic arterial routes connecting towns; may have robots.</td>
-                                <td class="p-2.5">Diamond (R21-R99), Primary N routes.</td>
-                                <td class="p-2.5">Connects directly at-grade.</td>
-                            </tr>
-                            <tr>
-                                <td class="p-2.5 font-bold text-slate-900">Minor Highway</td>
-                                <td class="p-2.5">Regional connector roads, often single-lane.</td>
-                                <td class="p-2.5">Rectangle (R100-R727).</td>
-                                <td class="p-2.5">Regulated by stop signs/robots.</td>
-                            </tr>
-                            <tr>
-                                <td class="p-2.5 font-bold text-slate-900">Primary Street</td>
-                                <td class="p-2.5">The main transit arteries through a suburb (e.g., Jan Smuts Ave).</td>
-                                <td class="p-2.5">N/A</td>
-                                <td class="p-2.5">Fastest route through a neighborhood.</td>
-                            </tr>
-                            <tr>
-                                <td class="p-2.5 font-bold text-slate-900">Street</td>
-                                <td class="p-2.5">Standard residential paved roads.</td>
-                                <td class="p-2.5">N/A</td>
-                                <td class="p-2.5">Default local road.</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <h3 class="text-base font-bold mb-2 text-slate-900">Localized Mapping Challenges</h3>
-                <div class="space-y-4 text-sm text-slate-600">
-                    <p><strong>The Great Dirt Road Penalty:</strong> How Waze handles unpaved rural or farm roads. Mark them as Street but check the Unpaved box. This applies an automatic routing penalty for normal cars unless the driver explicitly toggles "Allow Dirt Roads" in-app.</p>
-                    <p><strong>Parking Lot Restraint:</strong> Shopping center and parkade layouts. Do not map every single lane. Map only the primary entry/exit tracks and main thoroughfares to avoid getting your edits flagged or cleaned up by Area Managers.</p>
-                    <p><strong>Bridges & Level Layering:</strong> Ground level is Level 0. Overpasses and underpasses must use alternating levels (1, 2, -1) so Waze knows the roads cross without physically intersecting.</p>
-                </div>
-            </section>
-
-            <section id="blueprint-mentor" class="scroll-mt-20 mb-16 border-b border-slate-200 pb-12">
-                <div class="border-b border-slate-200 pb-4 mb-6">
-                    <span class="text-xs font-bold text-[#2cb2df] uppercase tracking-wider font-mono">Blueprint | Module 6</span>
-                    <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight mt-1 text-slate-900">How to Help Others & How to Lead</h2>
-                </div>
-                <h3 class="text-base font-bold mb-2 text-slate-900">How to Help Others (The Community & Support Ecosystem)</h3>
-                <p class="mb-4 text-sm text-slate-600">Mapping is a team sport. This module teaches you how to leverage the collective brain of the SA Community.</p>
-                <div class="space-y-3 text-sm text-slate-600 mb-6">
-                    <p><strong>The Slack Ecosystem (Our Primary Hub):</strong> Why we prefer text coordination on Slack over the traditional forums for local, agile map management.</p>
-                    <p><strong>The Request Protocols:</strong> How to ask for "Up Locks" or "Down Locks" safely when you need to edit a high-level road restricted to your current rank, or how to submit a formal Road Closure request.</p>
-                    <p class="border-l-4 border-red-500 pl-3 text-rose-900 bg-rose-50 p-2 rounded-r-md"><strong>Strict Rule:</strong> Never trace roads or extract details from Google Maps or Google aerial images. It violates copyright and causes layout discrepancies (especially in gated zones).<br>
-                    <strong>Approved Alternatives:</strong> Rely on Waze's native satellite feeds or official local government data like the Surveyor General or Chief Directorate: National Geospatial Information.</p>
-                </div>
-                <h3 class="text-base font-bold mb-2 text-slate-900">How to Lead (The Mentor Track)</h3>
-                <p class="mb-4 text-sm text-slate-600">For advanced Editors looking to scale their knowledge and step into regional management roles.</p>
-                <ul class="list-disc list-inside space-y-2 text-sm text-slate-600">
-                    <li><strong>Constructive Map Review Skills:</strong> How to review a junior editor's work without making them feel defensive.</li>
-                    <li><strong>The Psychology of Feedback:</strong> Turning a map correction into a teaching moment.</li>
-                    <li><strong>Area & Country Management:</strong> Understanding the operational responsibilities of an Area Manager (AM) and Country Manager (CM), balancing global Waze protocols with uniquely South African municipal realities.</li>
-                </ul>
-            </section>
-
-            <section id="welcome" class="scroll-mt-20 mb-16 pt-4">
-                <div class="border-b border-slate-200 pb-4 mb-6">
-                    <span class="text-xs font-bold text-slate-400 uppercase tracking-wider font-mono">Guide | Page 1</span>
-                    <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight mt-1 text-slate-900">Welcome & Getting Started</h2>
-                    <p class="text-slate-500 text-sm mt-1">Your first steps into the SA Waze editing community</p>
-                </div>
-
-                <h3 class="text-lg font-bold mb-3 text-slate-900">What is Waze?</h3>
-                <p class="mb-4 leading-relaxed text-sm text-slate-600">Waze is a free GPS navigation app for your smartphone. Beyond just giving you directions, it:</p>
-                <ul class="list-disc list-inside text-sm text-slate-600 space-y-1.5 mb-4">
-                    <li>Provides spoken turn-by-turn directions with street names (Text-to-Speech)</li>
-                    <li>Shows real-time traffic conditions and incidents reported by other drivers</li>
-                    <li>Routes you around traffic, road closures, and accidents</li>
-                    <li>Supports toll road avoidance</li>
-                    <li>Gets better the more people use it — including you</li>
-                </ul>
-                <p class="mb-4 text-sm text-slate-600">The map is community-maintained. Regular people — Wazers like you — keep it accurate, up to date, and useful. Every time you drive with Waze running, you're contributing data. When you edit the map, you're directly improving navigation for everyone in South Africa.</p>
-
-                <div class="bg-amber-50 border-l-4 border-amber-500 p-4 rounded-r-lg mb-6 text-sm text-amber-900">
-                    <strong class="block mb-1">Before You Start Editing</strong>
-                    <p class="mb-2"><strong>Important:</strong> Read this before touching the map editor. A few hours of reading now will prevent you from accidentally breaking things that affect thousands of daily commuters.</p>
-                    <p><strong>The golden rule of Waze editing:</strong> Usability, Simplicity, Retention.</p>
-                    <ul class="list-disc list-inside mt-1 space-y-0.5 pl-2">
-                        <li>Make it useful for routing</li>
-                        <li>Keep it simple and uncluttered</li>
-                        <li>Never delete roads — deleting removes traffic history that took years to build</li>
+        <aside class="w-64 shrink-0 hidden md:block sticky top-24 h-[calc(100vh-8rem)] overflow-y-auto pr-2 border-r border-gray-200">
+            <nav class="space-y-6 text-sm">
+                <div>
+                    <h3 class="font-bold text-slate-900 uppercase tracking-wider text-xs mb-3 flex items-center gap-2">
+                        <i class="fa-solid fa-compass text-amber-500"></i> Part 1: The Blueprint
+                    </h3>
+                    <ul class="space-y-2 border-l-2 border-gray-100 pl-4">
+                        <li><a href="#bp-impact" class="block text-gray-600 hover:text-amber-600 transition-colors">Real-World Impact</a></li>
+                        <li><a href="#bp-fear" class="block text-gray-600 hover:text-amber-600 transition-colors">Conquering the Fear</a></li>
+                        <li><a href="#bp-investigate" class="block text-gray-600 hover:text-amber-600 transition-colors">Investigation Framework</a></li>
+                        <li><a href="#bp-hierarchy" class="block text-gray-600 hover:text-amber-600 transition-colors">Road Hierarchy Matrix</a></li>
+                        <li><a href="#bp-community" class="block text-gray-600 hover:text-amber-600 transition-colors">Community Ecosystem</a></li>
                     </ul>
                 </div>
 
-                <h3 class="text-lg font-bold mb-2 text-slate-900">Step 1: Join the Community</h3>
-                <p class="mb-2 text-sm text-slate-600 font-semibold">Join us on Slack</p>
-                <p class="mb-2 text-sm text-slate-600">The South African Waze community communicates primarily via Slack:</p>
-                <ul class="font-mono text-xs text-slate-700 bg-slate-100 p-3 rounded-lg space-y-1 mb-4">
-                    <li>Server: wazeinternational.slack.com</li>
-                    <li>Invite link: bit.ly/WazeIntSlack</li>
-                    <li>Join the #south-africa channel</li>
-                </ul>
-                <p class="mb-4 text-sm text-slate-600">Slack is where you'll get help, request road unlocks, report issues, and connect with Area Managers and Country Managers. It's quicker and more direct than the forums for day-to-day questions.</p>
-                
-                <p class="mb-2 text-sm text-slate-600 font-semibold">SA Forum Sections</p>
-                <p class="mb-2 text-sm text-slate-600">The SA-specific Discuss forums are organised by province:</p>
-                <ul class="list-disc list-inside text-xs text-slate-600 space-y-1 mb-4">
-                    <li>South Africa (main) — waze.com/discuss/c/4723</li>
-                    <li>Gauteng, Western Cape, KwaZulu-Natal, Eastern Cape, Free State</li>
-                    <li>Northern Cape, Limpopo, Mpumalanga, North-West</li>
-                    <li>National Roads (N-Route Numbers)</li>
-                    <li>Standards and Guidelines</li>
-                    <li>SA Unlock / Road Closure Requests</li>
-                </ul>
-                <p class="mb-6 text-xs text-slate-500 italic">Tip: Before posting a new topic, search first. Your question has likely already been answered.</p>
+                <div>
+                    <h3 class="font-bold text-slate-900 uppercase tracking-wider text-xs mb-3 flex items-center gap-2">
+                        <i class="fa-solid fa-book text-amber-500"></i> Part 2: Complete Guide
+                    </h3>
+                    <ul class="space-y-2 border-l-2 border-gray-100 pl-4">
+                        <li><a href="#guide-start" class="block text-gray-600 hover:text-amber-600 transition-colors">Getting Started</a></li>
+                        <li><a href="#guide-wme" class="block text-gray-600 hover:text-amber-600 transition-colors">WME Interface & Shortcuts</a></li>
+                        <li><a href="#guide-naming" class="block text-gray-600 hover:text-amber-600 transition-colors">Naming & Speed Limits</a></li>
+                        <li><a href="#guide-editing" class="block text-gray-600 hover:text-amber-600 transition-colors">Creating & Editing Roads</a></li>
+                        <li><a href="#guide-locking" class="block text-gray-600 hover:text-amber-600 transition-colors">Locking, Places & Tolls</a></li>
+                        <li><a href="#guide-avoid" class="block text-gray-600 hover:text-amber-600 transition-colors">Edits to Avoid</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </aside>
 
-                <h3 class="text-lg font-bold mb-2 text-slate-900">Step 2: Understand Editable Areas</h3>
-                <p class="mb-3 text-sm text-slate-600">When you log into WME, you can only edit within your editable area:</p>
-                <ul class="list-disc list-inside text-sm text-slate-600 space-y-1 mb-3">
-                    <li>Roads you have driven recently with Waze running</li>
-                    <li>Areas within a certain distance of those roads (radius grows with your editor rank)</li>
-                    <li>Any area you've been assigned as an Area Manager</li>
-                </ul>
-                <p class="mb-6 text-sm text-slate-600">Your drive-based editable area expires <strong>90 days</strong> after the date of the drive. Keep driving with Waze to maintain your area. Press <strong>Shift+E</strong> in WME to toggle the editable area layer.</p>
-
-                <h3 class="text-lg font-bold mb-3 text-slate-900">Step 3: Ranks and Points</h3>
-                <p class="mb-2 text-sm text-slate-600 font-semibold">Driving Points (Client Levels)</p>
-                <div class="overflow-x-auto border border-slate-200 rounded-xl bg-white mb-6 text-xs sm:text-sm">
-                    <table class="w-full text-left border-collapse">
-                        <thead>
-                            <tr class="bg-slate-50 border-b border-slate-200 text-slate-600 font-semibold"><th class="p-2.5">Level</th><th class="p-2.5">Name</th><th class="p-2.5">Requirement</th></tr>
-                        </thead>
-                        <tbody class="divide-y divide-slate-100 text-slate-600 font-medium">
-                            <tr><td class="p-2.5">1</td><td class="p-2.5">Waze Baby</td><td class="p-2.5">New account</td></tr>
-                            <tr><td class="p-2.5">2</td><td class="p-2.5">Waze Grown-Up</td><td class="p-2.5">Drive ~100 miles</td></tr>
-                            <tr><td class="p-2.5">3</td><td class="p-2.5">Waze Warrior</td><td class="p-2.5">Top 10% of drivers in your region</td></tr>
-                            <tr><td class="p-2.5">4</td><td class="p-2.5">Waze Knight</td><td class="p-2.5">Top 4% of drivers in your region</td></tr>
-                            <tr><td class="p-2.5">5</td><td class="p-2.5">Waze Royalty</td><td class="p-2.5">Top 1% of drivers in your region</td></tr>
-                        </tbody>
-                    </table>
+        <main class="flex-1 min-w-0" id="contentArea">
+            
+            <section class="mb-16 border-b border-gray-200 pb-16">
+                <div class="bg-gradient-to-r from-slate-900 to-slate-800 rounded-2xl p-8 text-white mb-12 shadow-sm">
+                    <span class="text-amber-400 font-semibold tracking-wider uppercase text-xs">Module 01</span>
+                    <h1 class="text-3xl font-extrabold tracking-tight mt-1 mb-4">The South Africa Waze Map Editor Guide Blueprint</h1>
+                    <p class="text-slate-300 max-w-2xl text-base leading-relaxed">Your foundations and core philosophy before moving pixels. Understand why precise mapping matters on local South African streets.</p>
                 </div>
 
-                <p class="mb-2 text-sm text-slate-600 font-semibold">Points per Activity</p>
-                <div class="overflow-x-auto border border-slate-200 rounded-xl bg-white mb-6 text-xs sm:text-sm">
-                    <table class="w-full text-left border-collapse">
-                        <thead>
-                            <tr class="bg-slate-50 border-b border-slate-200 text-slate-600 font-semibold"><th class="p-2.5">Activity</th><th class="p-2.5">Points</th></tr>
-                        </thead>
-                        <tbody class="divide-y divide-slate-100 text-slate-600 font-medium">
-                            <tr><td class="p-2.5">Complete a drive</td><td class="p-2.5">5 per drive</td></tr>
-                            <tr><td class="p-2.5">Report something (traffic, hazard, etc.)</td><td class="p-2.5">6 per report</td></tr>
-                            <tr><td class="p-2.5">Add a voice report</td><td class="p-2.5">9 per report</td></tr>
-                            <tr><td class="p-2.5">Edit the map</td><td class="p-2.5">3 per edit</td></tr>
-                            <tr><td class="p-2.5">Add/update fuel prices</td><td class="p-2.5">8 per edit</td></tr>
-                            <tr><td class="p-2.5">Confirm an alert (There / Not there)</td><td class="p-2.5">2 per tap</td></tr>
-                            <tr><td class="p-2.5">Add a photo to a place</td><td class="p-2.5">9 per photo</td></tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <p class="mb-2 text-sm text-slate-600 font-semibold">Editor Rank (Map Editing Level)</p>
-                <div class="overflow-x-auto border border-slate-200 rounded-xl bg-white mb-4 text-xs sm:text-sm">
-                    <table class="w-full text-left border-collapse">
-                        <thead>
-                            <tr class="bg-slate-50 border-b border-slate-200 text-slate-600 font-semibold"><th class="p-2.5">Level</th><th class="p-2.5">Description</th><th class="p-2.5">Approx. Edits</th></tr>
-                        </thead>
-                        <tbody class="divide-y divide-slate-100 text-slate-600 font-medium">
-                            <tr><td class="p-2.5">1</td><td class="p-2.5">New editor</td><td class="p-2.5">Starting level</td></tr>
-                            <tr><td class="p-2.5">2</td><td class="p-2.5">Beginner editor</td><td class="p-2.5">~3,000 edits</td></tr>
-                            <tr><td class="p-2.5">3</td><td class="p-2.5">Proficient editor (most Area Managers)</td><td class="p-2.5">~25,000 edits</td></tr>
-                            <tr><td class="p-2.5">4</td><td class="p-2.5">Advanced editor</td><td class="p-2.5">~100,000 edits</td></tr>
-                            <tr><td class="p-2.5">5</td><td class="p-2.5">Expert editor (most Country Managers)</td><td class="p-2.5">~250,000 edits</td></tr>
-                            <tr><td class="p-2.5">6</td><td class="p-2.5">Waze Champ</td><td class="p-2.5">By invitation and review</td></tr>
-                        </tbody>
-                    </table>
-                </div>
-                <p class="mb-6 text-sm text-slate-500 font-medium">Important: Edit count alone doesn't get you promoted. Quality, community involvement, and proper communication all matter — especially at higher ranks.</p>
-
-                <h3 class="text-lg font-bold mb-2 text-slate-900">Step 4: Your First Editing Session</h3>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6 text-sm">
-                    <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-xs">
-                        <span class="font-bold text-emerald-900 block mb-2">What's safe to do when you're new</span>
-                        <ul class="list-disc list-inside space-y-1 text-slate-600 text-xs">
-                            <li>Fix spelling mistakes on road names</li>
-                            <li>Correct road direction (one-way vs two-way)</li>
-                            <li>Verify which turns are allowed or blocked at intersections</li>
-                            <li>Add missing roads you've recently driven</li>
-                            <li>Add or correct basic Place information (name, category, address)</li>
-                        </ul>
+                <div id="bp-impact" class="doc-card mb-12 scroll-mt-24">
+                    <h2 class="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-3">
+                        <span class="p-2 bg-amber-100 text-amber-700 rounded-lg text-sm"><i class="fa-solid fa-heart-pulse"></i></span>
+                        Why It Matters (The Real-World Impact)
+                    </h2>
+                    <p class="text-gray-600 mb-6 leading-relaxed">Waze isn't a video game; it impacts real South Africans daily. Precise layouts can change commute times and ensure emergency paths are open.</p>
+                    <div class="grid gap-4 sm:grid-cols-3">
+                        <div class="bg-white p-5 border border-gray-200 rounded-xl shadow-sm">
+                            <h4 class="font-bold text-slate-900 mb-2 text-sm">Emergency Services</h4>
+                            <p class="text-gray-600 text-xs leading-relaxed">Accurate routing past informal settlements or gated estates saves critical seconds for ambulances.</p>
+                        </div>
+                        <div class="bg-white p-5 border border-gray-200 rounded-xl shadow-sm">
+                            <h4 class="font-bold text-slate-900 mb-2 text-sm">The School Run</h4>
+                            <p class="text-gray-600 text-xs leading-relaxed">Optimizing neighborhood routing vs. major arterial avenues manages heavy peak traffic gridlock.</p>
+                        </div>
+                        <div class="bg-white p-5 border border-gray-200 rounded-xl shadow-sm">
+                            <h4 class="font-bold text-slate-900 mb-2 text-sm">The Cost of Commuting</h4>
+                            <p class="text-gray-600 text-xs leading-relaxed">Properly flagged traditional toll plazas and gravel corridors protects vehicles from heavy wear-and-tear.</p>
+                        </div>
                     </div>
-                    <div class="bg-rose-50/50 p-4 rounded-xl border border-rose-100 shadow-xs">
-                        <span class="font-bold text-rose-900 block mb-2">What to avoid until you know more</span>
-                        <ul class="list-disc list-inside space-y-1 text-rose-950 text-xs">
-                            <li>Do not delete roads — ever. Not even obvious duplicates. Ask first.</li>
-                            <li>Don't create parking lot roads in detail (just entrances and main lanes).</li>
-                            <li>Don't touch major highways and their ramps without experience or guidance.</li>
-                            <li>Don't modify roads that are locked above your level.</li>
-                            <li>Don't split two-way roads into one-way pairs without fully understanding the implications.</li>
-                        </ul>
+                    <div class="mt-6 bg-amber-50 border-l-4 border-amber-500 p-4 rounded-r-xl">
+                        <span class="text-xs font-bold text-amber-800 uppercase tracking-wide block mb-1">Case Study: The Gated Estate Trap</span>
+                        <p class="text-gray-700 text-sm leading-relaxed">Leaving a resident-only back gate open triggers Waze to mistakenly guide delivery fleets into secured perimeters like Dainfern or Woodmead.</p>
                     </div>
                 </div>
 
-                <h3 class="text-lg font-bold mb-2 text-slate-900">Step 5: Drive with Waze On</h3>
-                <p class="mb-3 text-sm text-slate-600">The simplest way to improve Waze is just to drive around with it running — even when you don't need navigation. Every trip:</p>
-                <ul class="list-disc list-inside text-sm text-slate-600 space-y-1 mb-4">
-                    <li>Records road speeds at different times of day</li>
-                    <li>Confirms road layout and direction</li>
-                    <li>Expands your editable area</li>
-                </ul>
-                <p class="text-xs text-slate-500 italic">Tip: Your daily commute is enough. You don't need to make special trips.</p>
+                <div id="bp-fear" class="doc-card mb-12 scroll-mt-24">
+                    <h2 class="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-3">
+                        <span class="p-2 bg-amber-100 text-amber-700 rounded-lg text-sm"><i class="fa-solid fa-shield-halved"></i></span>
+                        How Not to Break South Africa
+                    </h2>
+                    <p class="text-gray-600 mb-4 leading-relaxed">The main reason new volunteers quit is the fear of making mistakes. Everyone breaks a link eventually—what matters is managing it smoothly.</p>
+                    <ul class="space-y-3 text-sm text-gray-600 bg-white p-5 border border-gray-200 rounded-xl">
+                        <li class="flex gap-2"><i class="fa-solid fa-circle-check text-green-500 mt-0.5"></i> <strong>The Guardian Mindset:</strong> Focus on maintenance and learning local setups safely on Day 1 rather than constructing major expressways.</li>
+                        <li class="flex gap-2"><i class="fa-solid fa-circle-check text-green-500 mt-0.5"></i> <strong>The Golden Rule:</strong> Never connect non-drivable paths (rail lines, boardwalks) directly into roads. Otherwise, normal hatchbacks get routed down active tracks.</li>
+                        <li class="flex gap-2"><i class="fa-solid fa-circle-check text-green-500 mt-0.5"></i> <strong>Red Means Stop:</strong> Red lines indicate unconfirmed roads that need full labels and classification before handling live traffic.</li>
+                    </ul>
+                </div>
+
+                <div id="bp-investigate" class="doc-card mb-12 scroll-mt-24">
+                    <h2 class="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-3">
+                        <span class="p-2 bg-amber-100 text-amber-700 rounded-lg text-sm"><i class="fa-solid fa-magnifying-glass"></i></span>
+                        The Investigation Framework
+                    </h2>
+                    <p class="text-gray-600 mb-6 leading-relaxed">Investigate thoroughly before applying changes. Understand the map routing logic before modifying segments.</p>
+                    <div class="relative pl-6 border-l-2 border-amber-400 space-y-6 text-sm">
+                        <div>
+                            <span class="absolute left-[-9px] bg-amber-400 text-slate-900 font-bold rounded-full w-4 h-4 flex items-center justify-center text-[10px]">1</span>
+                            <strong class="text-slate-950">GPS Tracks:</strong> Review active GPS track vectors to see actual vehicle coordinates.
+                        </div>
+                        <div>
+                            <span class="absolute left-[-9px] bg-amber-400 text-slate-900 font-bold rounded-full w-4 h-4 flex items-center justify-center text-[10px]">2</span>
+                            <strong class="text-slate-950">LiveMap:</strong> Test how the standard routing algorithms behave on that specific junction.
+                        </div>
+                        <div>
+                            <span class="absolute left-[-9px] bg-amber-400 text-slate-900 font-bold rounded-full w-4 h-4 flex items-center justify-center text-[10px]">3</span>
+                            <strong class="text-slate-950">Street View:</strong> Cross-check actual lane signage, turns, and structures.
+                        </div>
+                        <div>
+                            <span class="absolute left-[-9px] bg-amber-400 text-slate-900 font-bold rounded-full w-4 h-4 flex items-center justify-center text-[10px]">4</span>
+                            <strong class="text-slate-950">Community Chat:</strong> Discuss odd layouts with nearby area coordinators on Slack.
+                        </div>
+                        <div>
+                            <span class="absolute left-[-9px] bg-amber-400 text-slate-900 font-bold rounded-full w-4 h-4 flex items-center justify-center text-[10px]">5</span>
+                            <strong class="text-slate-950">The Edit:</strong> Commit changes to the map once your gathered evidence matches.
+                        </div>
+                    </div>
+                </div>
+
+                <div id="bp-hierarchy" class="doc-card mb-12 scroll-mt-24">
+                    <h2 class="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-3">
+                        <span class="p-2 bg-amber-100 text-amber-700 rounded-lg text-sm"><i class="fa-solid fa-layer-group"></i></span>
+                        South African Road Hierarchy Rules
+                    </h2>
+                    <p class="text-gray-600 mb-4 leading-relaxed">Roads are categorized based on function and traffic flow rather than legal classifications alone.</p>
+                    <div class="overflow-x-auto border border-gray-200 rounded-xl bg-white shadow-sm">
+                        <table class="w-full text-left border-collapse text-sm">
+                            <thead>
+                                <tr class="bg-slate-50 border-b border-gray-200 text-slate-700 font-semibold">
+                                    <th class="p-4">Road Type</th>
+                                    <th class="p-4">Functional Role</th>
+                                    <th class="p-4">Sign/Prefix</th>
+                                    <th class="p-4">WME Editor Rule</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-200 text-gray-600">
+                                <tr>
+                                    <td class="p-4 font-semibold text-slate-900">Freeway</td>
+                                    <td class="p-4">Controlled-access layout. No driveways or intersections.</td>
+                                    <td class="p-4">Pentagon (N1-N18), R/M routes</td>
+                                    <td class="p-4">Must be mapped as two distinct 1-way lines.</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-4 font-semibold text-slate-900">Major Highway</td>
+                                    <td class="p-4">Arterials connecting commercial nodes; may feature intersections.</td>
+                                    <td class="p-4">Diamond (R21-R99), Primary N</td>
+                                    <td class="p-4">Connects directly at-grade.</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-4 font-semibold text-slate-900">Minor Highway</td>
+                                    <td class="p-4">Regional intersections, often single lanes.</td>
+                                    <td class="p-4">Rectangle (R100-R727)</td>
+                                    <td class="p-4">Controlled via stop controls/signals.</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-4 font-semibold text-slate-900">Primary Street</td>
+                                    <td class="p-4">Major central neighborhood roads (e.g., Jan Smuts Ave).</td>
+                                    <td class="p-4">N/A</td>
+                                    <td class="p-4">Fastest structural route option.</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-4 font-semibold text-slate-900">Street</td>
+                                    <td class="p-4">Standard paved suburban paths.</td>
+                                    <td class="p-4">N/A</td>
+                                    <td class="p-4">Standard local street properties.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div id="bp-community" class="doc-card scroll-mt-24">
+                    <h2 class="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-3">
+                        <span class="p-2 bg-amber-100 text-amber-700 rounded-lg text-sm"><i class="fa-solid fa-users"></i></span>
+                        Community & Support Ecosystem
+                    </h2>
+                    <p class="text-gray-600 mb-4 leading-relaxed">Map curation is built around teamwork. The South African editing community prioritizes coordination channels over text forums for fast updates.</p>
+                    <div class="bg-red-50 border-l-4 border-red-500 p-4 rounded-r-xl text-sm mb-4">
+                        <strong class="text-red-800 flex items-center gap-2 mb-1"><i class="fa-solid fa-triangle-exclamation"></i> Intellectual Property Boundaries</strong>
+                        Never copy layouts or details from Google Maps or Google aerial photography. It violates map copyright terms and causes misalignment issues. Use official satellite layers or state geospatial records instead.
+                    </div>
+                </div>
             </section>
 
-            <section id="interface" class="scroll-mt-20 mb-16">
-                <div class="border-b border-slate-200 pb-4 mb-6">
-                    <span class="text-xs font-bold text-slate-400 uppercase tracking-wider font-mono">Guide | Page 2</span>
-                    <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight mt-1 text-slate-900">The Waze Map Editor (WME)</h2>
-                    <p class="text-slate-500 text-sm mt-1">Interface, controls, keyboard shortcuts, and permalinks</p>
+
+            <section>
+                <div class="bg-gradient-to-r from-amber-500 to-amber-600 rounded-2xl p-8 text-white mb-12 shadow-sm">
+                    <span class="text-slate-900 font-semibold tracking-wider uppercase text-xs">Module 02</span>
+                    <h1 class="text-3xl font-extrabold tracking-tight mt-1 mb-4">Wazeopedia South Africa: Reference Guide</h1>
+                    <p class="text-amber-50 max-w-2xl text-base leading-relaxed">Practical documentation on properties, interface layouts, speed limits, and advanced editing patterns across local provinces.</p>
                 </div>
 
-                <h3 class="text-lg font-bold mb-2 text-slate-900">What is the Waze Map Editor?</h3>
-                <p class="mb-4 text-sm text-slate-600">The Waze Map Editor (WME) is the web-based tool for editing the Waze map. Access it at <strong>waze.com/editor</strong>. You need a Waze account to edit the real map. Practice mode (log out, select Practice) lets you explore without affecting the live map. Use Chrome or Firefox for best results — mobile browsers don't work well.</p>
-
-                <h3 class="text-lg font-bold mb-2 text-slate-900">The Interface at a Glance</h3>
-                <ul class="list-disc list-inside text-sm text-slate-600 space-y-1 mb-4">
-                    <li><strong>Top toolbar:</strong> Layers icon (top right), Draw road/Roundabout tool, Save button</li>
-                    <li><strong>Left panel — nothing selected:</strong> Shows tabs for Drives, URs (update requests), and Map Problems</li>
-                    <li><strong>Left panel — segment selected:</strong> Shows road properties (name, city, type, direction, speed limit, elevation, lock level)</li>
-                    <li><strong>Left panel — junction selected:</strong> Shows turn restriction options</li>
-                    <li><strong>Map area:</strong> Click a road to select it. Ctrl+click for multi-select. Drag to pan, scroll to zoom.</li>
-                </ul>
-                <div class="bg-sky-50 border-l-4 border-[#33ccff] p-4 rounded-r-lg mb-6 text-sm text-sky-900">
-                    🇿🇦 <strong>Tip:</strong> In South Africa we use Metric, so be sure to go into Settings and change the Units to Metric.
-                </div>
-
-                <h3 class="text-lg font-bold mb-2 text-slate-900">Keyboard Shortcuts</h3>
-                <p class="mb-4 text-sm text-slate-600">Press <strong>?</strong> in WME at any time to see the full list. You can customise shortcuts via the <strong>?</strong> panel, but settings only apply to your current browser and computer.</p>
-                
-                <p class="mb-1 text-xs font-bold uppercase text-slate-400">General</p>
-                <div class="overflow-x-auto border border-slate-200 rounded-xl bg-white mb-4 text-xs font-medium text-slate-600">
-                    <table class="w-full text-left border-collapse"><tbody class="divide-y divide-slate-100">
-                        <tr><td class="p-2.5 font-mono text-slate-900 font-bold w-32">?</td><td class="p-2.5">Show keyboard shortcuts panel</td></tr>
-                        <tr><td class="p-2.5 font-mono text-slate-900 font-bold">Ctrl+S / Cmd+S</td><td class="p-2.5">Save your edits</td></tr>
-                        <tr><td class="p-2.5 font-mono text-slate-900 font-bold">Delete</td><td class="p-2.5">Delete selected segment, junction, or place</td></tr>
-                        <tr><td class="p-2.5 font-mono text-slate-900 font-bold">Esc</td><td class="p-2.5">Deselect everything</td></tr>
-                        <tr><td class="p-2.5 font-mono text-slate-900 font-bold">F</td><td class="p-2.5">Jump cursor to the search box</td></tr>
-                        <tr><td class="p-2.5 font-mono text-slate-900 font-bold">Alt+Shift+R</td><td class="p-2.5">Reload all map layers (preserves chat)</td></tr>
-                    </tbody></table>
-                </div>
-
-                <p class="mb-1 text-xs font-bold uppercase text-slate-400">Drawing</p>
-                <div class="overflow-x-auto border border-slate-200 rounded-xl bg-white mb-4 text-xs font-medium text-slate-600">
-                    <table class="w-full text-left border-collapse"><tbody class="divide-y divide-slate-100">
-                        <tr><td class="p-2.5 font-mono text-slate-900 font-bold w-32">I</td><td class="p-2.5">Insert (draw) a new road segment</td></tr>
-                        <tr><td class="p-2.5 font-mono text-slate-900 font-bold">O</td><td class="p-2.5">Draw a new roundabout</td></tr>
-                    </tbody></table>
-                </div>
-
-                <p class="mb-1 text-xs font-bold uppercase text-slate-400">Editing Segments</p>
-                <div class="overflow-x-auto border border-slate-200 rounded-xl bg-white mb-4 text-xs font-medium text-slate-600">
-                    <table class="w-full text-left border-collapse"><tbody class="divide-y divide-slate-100">
-                        <tr><td class="p-2.5 font-mono text-slate-900 font-bold w-32">E</td><td class="p-2.5">Activate Edit mode for selected segment(s)</td></tr>
-                        <tr><td class="p-2.5 font-mono text-slate-900 font-bold">D</td><td class="p-2.5">Delete a geometry node (hover over it while pressing D)</td></tr>
-                        <tr><td class="p-2.5 font-mono text-slate-900 font-bold">R</td><td class="p-2.5">Toggle road direction: two-way / one-way A→B / one-way B→A</td></tr>
-                        <tr><td class="p-2.5 font-mono text-slate-900 font-bold">M</td><td class="p-2.5">Toggle multi-select mode</td></tr>
-                        <tr><td class="p-2.5 font-mono text-slate-900 font-bold">H</td><td class="p-2.5">Activate house number editing mode</td></tr>
-                        <tr><td class="p-2.5 font-mono text-slate-900 font-bold">T</td><td class="p-2.5">Activate time-based restrictions mode</td></tr>
-                        <tr><td class="p-2.5 font-mono text-slate-900 font-bold">Ctrl+A</td><td class="p-2.5">Select entire street (all segments with same name)</td></tr>
-                        <tr><td class="p-2.5 font-mono text-slate-900 font-bold">Ctrl+Z</td><td class="p-2.5">Undo</td></tr>
-                        <tr><td class="p-2.5 font-mono text-slate-900 font-bold">Ctrl+Shift+Z</td><td class="p-2.5">Redo</td></tr>
-                        <tr><td class="p-2.5 font-mono text-slate-900 font-bold">Ctrl+↑ / Ctrl+↓</td><td class="p-2.5">Raise / lower elevation of selected segment(s)</td></tr>
-                    </tbody></table>
-                </div>
-
-                <p class="mb-1 text-xs font-bold uppercase text-slate-400">Junctions and Turn Arrows</p>
-                <div class="overflow-x-auto border border-slate-200 rounded-xl bg-white mb-4 text-xs font-medium text-slate-600">
-                    <table class="w-full text-left border-collapse"><tbody class="divide-y divide-slate-100">
-                        <tr><td class="p-2.5 font-mono text-slate-900 font-bold w-32">Q</td><td class="p-2.5">Disallow all turns at selected junction (all red)</td></tr>
-                        <tr><td class="p-2.5 font-mono text-slate-900 font-bold">W</td><td class="p-2.5">Allow all turns at selected junction (all green)</td></tr>
-                        <tr><td class="p-2.5 font-mono text-slate-900 font-bold">A</td><td class="p-2.5">Toggle turn arrows between opaque and transparent</td></tr>
-                        <tr><td class="p-2.5 font-mono text-slate-900 font-bold">S</td><td class="p-2.5">Spread/separate overlapping turn arrows</td></tr>
-                        <tr><td class="p-2.5 font-mono text-slate-900 font-bold">Shift+Z</td><td class="p-2.5">Show all disallowed turns across the entire visible map</td></tr>
-                    </tbody></table>
-                </div>
-                <p class="mb-4 text-xs text-slate-500 italic">Tip: When you create a new junction, always press Q first (disallow all) and then W (allow all). This clears hidden 'soft' turn restrictions that can cause routing problems.</p>
-
-                <p class="mb-1 text-xs font-bold uppercase text-slate-400">Display and Layers</p>
-                <div class="overflow-x-auto border border-slate-200 rounded-xl bg-white mb-4 text-xs font-medium text-slate-600">
-                    <table class="w-full text-left border-collapse"><tbody class="divide-y divide-slate-100">
-                        <tr><td class="p-2.5 font-mono text-slate-900 font-bold w-32">Shift+I</td><td class="p-2.5">Toggle satellite imagery</td></tr>
-                        <tr><td class="p-2.5 font-mono text-slate-900 font-bold">Shift+R</td><td class="p-2.5">Toggle road layer</td></tr>
-                        <tr><td class="p-2.5 font-mono text-slate-900 font-bold">Shift+G</td><td class="p-2.5">Toggle GPS tracks layer</td></tr>
-                        <tr><td class="p-2.5 font-mono text-slate-900 font-bold">Shift+P</td><td class="p-2.5">Toggle map problems layer</td></tr>
-                        <tr><td class="p-2.5 font-mono text-slate-900 font-bold">Shift+U</td><td class="p-2.5">Toggle update requests layer</td></tr>
-                        <tr><td class="p-2.5 font-mono text-slate-900 font-bold">Shift+E</td><td class="p-2.5">Toggle editable area layer</td></tr>
-                        <tr><td class="p-2.5 font-mono text-slate-900 font-bold">Shift+A</td><td class="p-2.5">Toggle area managers layer</td></tr>
-                        <tr><td class="p-2.5 font-mono text-slate-900 font-bold">Shift+C</td><td class="p-2.5">Toggle cities layer</td></tr>
-                        <tr><td class="p-2.5 font-mono text-slate-900 font-bold">Shift+F</td><td class="p-2.5">Toggle full-screen mode</td></tr>
-                        <tr><td class="p-2.5 font-mono text-slate-900 font-bold">Shift+D</td><td class="p-2.5">Highlight unnamed segments</td></tr>
-                        <tr><td class="p-2.5 font-mono text-slate-900 font-bold">Alt+C</td><td class="p-2.5">Toggle chat window</td></tr>
-                    </tbody></table>
-                </div>
-                <p class="mb-6 text-xs text-slate-500 font-medium">Tip: On Mac: replace Ctrl with Cmd, and Alt with Opt.</p>
-
-                <h3 class="text-lg font-bold mb-2 text-slate-900">Permalinks</h3>
-                <p class="mb-4 text-sm text-slate-600">A permalink is a URL that links directly to a specific location in WME or the Livemap. Always share a permalink when asking for help, requesting a lock change, or reporting a map issue.</p>
-                <p class="mb-2 text-sm text-slate-600 font-semibold">How to create a permalink</p>
-                <ol class="list-decimal list-inside text-sm text-slate-600 space-y-1 mb-6">
-                    <li>Navigate to the location in WME</li>
-                    <li>Select the segment, junction, or place (optional, but includes it in the link)</li>
-                    <li>Click the Permalink (chain link) icon in the top right of WME</li>
-                    <li>Copy the URL from your browser address bar and share it</li>
-                </ol>
-
-                <h3 class="text-lg font-bold mb-2 text-slate-900">Useful Layers</h3>
-                <div class="overflow-x-auto border border-slate-200 rounded-xl bg-white mb-6 text-xs sm:text-sm">
-                    <table class="w-full text-left border-collapse">
-                        <thead>
-                            <tr class="bg-slate-50 border-b border-slate-200 text-slate-600 font-semibold"><th class="p-2.5">Layer</th><th class="p-2.5">When to use it</th></tr>
-                        </thead>
-                        <tbody class="divide-y divide-slate-100 text-slate-600 font-medium">
-                            <tr><td class="p-2.5 font-bold">Satellite imagery</td><td class="p-2.5">Verify road geometry, check if a road is correctly positioned</td></tr>
-                            <tr><td class="p-2.5 font-bold">GPS tracks</td><td class="p-2.5">See where real drivers go — great for finding missing roads</td></tr>
-                            <tr><td class="p-2.5 font-bold">Map problems</td><td class="p-2.5">Automated flags: wrong turns, missing connections, etc.</td></tr>
-                            <tr><td class="p-2.5 font-bold">Update requests (URs)</td><td class="p-2.5">User-submitted map error reports needing human review</td></tr>
-                            <tr><td class="p-2.5 font-bold">Editable area</td><td class="p-2.5">See exactly where you can edit</td></tr>
-                            <tr><td class="p-2.5 font-bold">Cities</td><td class="p-2.5">Check city/suburb assignments for road segments</td></tr>
-                            <tr><td class="p-2.5 font-bold">Area managers</td><td class="p-2.5">See who manages which area</td></tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <h3 class="text-lg font-bold mb-2 text-slate-900">Saving Your Work</h3>
-                <ul class="list-disc list-inside text-sm text-slate-600 space-y-1 mb-4">
-                    <li>Save regularly — don't batch up hundreds of changes before saving</li>
-                    <li>If you get a save error, hover over the save button to identify which change caused it</li>
-                    <li>Waze caps point credit at 150 changes per save — save more frequently to get full credit</li>
-                </ul>
-                <p class="mb-6 text-xs text-slate-500 italic">Tip: Save after every 10–20 significant changes, and always before closing the tab.</p>
-
-                <h3 class="text-lg font-bold mb-2 text-slate-900">Browser Scripts (Tampermonkey)</h3>
-                <p class="mb-4 text-sm text-slate-600">Some editors use browser scripts via Tampermonkey for extra functionality. These are not official Waze tools but are widely used in the SA community.</p>
-                <ul class="list-disc list-inside text-sm text-slate-600 space-y-2 mb-4">
-                    <li><strong>WME Junction Angle Info:</strong> shows what voice instruction drivers hear at a junction. Essential for checking your edits produce correct navigation prompts.</li>
-                    <li><strong>WME Toolbox:</strong> highlights errors, assists with common editing tasks</li>
-                    <li><strong>WME Color Highlights:</strong> makes road segment properties easier to see at a glance</li>
-                </ul>
-                <p class="text-xs text-slate-600 font-mono bg-slate-100 p-3 rounded-lg">Install Tampermonkey for Chrome or Firefox first, then add the script URL. The Junction Angle Info script URL: update.greasyfork.org/scripts/35547/</p>
-            </section>
-
-            <section id="road-types" class="scroll-mt-20 mb-16">
-                <div class="border-b border-slate-200 pb-4 mb-6">
-                    <span class="text-xs font-bold text-slate-400 uppercase tracking-wider font-mono">Guide | Page 3</span>
-                    <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight mt-1 text-slate-900">Road Types, Naming & Speed Limits</h2>
-                    <p class="text-slate-500 text-sm mt-1">How to classify and name roads correctly for South Africa</p>
-                </div>
-
-                <h3 class="text-lg font-bold mb-3 text-slate-900">The SA Numbered Route System</h3>
-                <div class="overflow-x-auto border border-slate-200 rounded-xl bg-white mb-6 text-xs sm:text-sm">
-                    <table class="w-full text-left border-collapse">
-                        <thead>
-                            <tr class="bg-slate-50 border-b border-slate-200 text-slate-600 font-semibold"><th class="p-2.5">Route Format</th><th class="p-2.5">Example</th><th class="p-2.5">Description</th></tr>
-                        </thead>
-                        <tbody class="divide-y divide-slate-100 text-slate-600 font-medium">
-                            <tr><td class="p-2.5 font-bold">N routes (N1–N18)</td><td class="p-2.5">N1, N3, N14</td><td class="p-2.5">National routes — connect major cities, span provinces. Pentagon signs. Some sections are freeways.</td></tr>
-                            <tr><td class="p-2.5 font-bold">R routes — major (Rxx)</td><td class="p-2.5">R21, R55</td><td class="p-2.5">Major regional routes — two-digit numbers. Diamond-shaped signs. Provincial level.</td></tr>
-                            <tr><td class="p-2.5 font-bold">R routes — minor (Rxxx)</td><td class="p-2.5">R512, R101</td><td class="p-2.5">Minor regional routes — three-digit numbers. Rectangular signs. Regional/local level. Can be paved or gravel.</td></tr>
-                            <tr><td class="p-2.5 font-bold">M routes</td><td class="p-2.5">M1, M5</td><td class="p-2.5">Metropolitan routes — only unique within their city. M1 in Joburg differs from M1 in Cape Town.</td></tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <h3 class="text-lg font-bold mb-3 text-slate-900">Waze Road Types for South Africa</h3>
-                <div class="space-y-4 text-sm text-slate-600 mb-6">
-                    <div>
-                        <p class="font-bold text-slate-900">Freeway</p>
-                        <p class="mb-1">A fully controlled-access highway with on/off-ramps, no at-grade intersections, no traffic signals. High-speed, free-flowing traffic.</p>
-                        <ul class="list-disc list-inside text-xs space-y-0.5 pl-2">
-                            <li>Only numbered routes (N, R, M) can be Freeway type</li>
-                            <li>Must be split into two separate one-way segments — one per direction</li>
-                            <li>Name format: route number + cardinal direction, e.g. N1 N or N3 S</li>
-                            <li>Named freeways: e.g. De Villiers Graaff Motorway (M1 N)</li>
-                            <li>Mark only the specific segment at the toll gate/gantry as 'toll road'</li>
-                            <li>Do not use Freeway type for inter-town sections that aren't actually access-controlled</li>
-                        </ul>
+                <div id="guide-start" class="doc-card mb-12 scroll-mt-24">
+                    <h2 class="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-3">
+                        <span class="p-2 bg-amber-100 text-amber-700 rounded-lg text-sm"><i class="fa-solid fa-circle-play"></i></span>
+                        Welcome & Getting Started
+                    </h2>
+                    <p class="text-gray-600 mb-4 leading-relaxed">The core map framework is built by everyday drivers. Every tracking trip helps refine real-time speeds, and direct edits ensure roads remain clean and accurate.</p>
+                    <div class="p-5 bg-white border border-gray-200 rounded-xl shadow-sm mb-6">
+                        <h3 class="font-bold text-slate-900 mb-3 text-sm">The Golden Rule of Map Editing</h3>
+                        <div class="grid grid-cols-3 gap-4 text-center text-xs">
+                            <div class="bg-slate-50 p-3 rounded-lg"><span class="font-bold text-slate-900 block mb-1">Usability</span> Fast, accurate engine choices</div>
+                            <div class="bg-slate-50 p-3 rounded-lg"><span class="font-bold text-slate-900 block mb-1">Simplicity</span> Clean, readable layouts</div>
+                            <div class="bg-slate-50 p-3 rounded-lg"><span class="font-bold text-slate-900 block mb-1">Retention</span> Keep roads to save historic data</div>
+                        </div>
                     </div>
-                    <div>
-                        <p class="font-bold text-slate-900">Major Highway</p>
-                        <p class="mb-1">National (N) and major regional routes (Rxx) that are not freeways. Connect towns, may pass through town centres, usually multi-lane, few or no signals.</p>
-                        <ul class="list-disc list-inside text-xs space-y-0.5 pl-2">
-                            <li>All N routes and two-digit R routes should be at least Major Highway type</li>
-                            <li>At-grade connections (slip ways) should match the road type they connect to — not Ramp type</li>
-                            <li>Name: route number mandatory, e.g. Main Reef Rd (R41 W)</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <p class="font-bold text-slate-900">Minor Highway</p>
-                        <p class="mb-1">Three-digit Rxxx routes. Usually single lane, regulated by signals/stop signs. Connects smaller towns.</p>
-                        <ul class="list-disc list-inside text-xs space-y-0.5 pl-2">
-                            <li>All three-digit R routes should be at least Minor Highway type</li>
-                            <li>Name: route number mandatory, e.g. Kliprivier Dr (R556 S)</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <p class="font-bold text-slate-900">Primary Street</p>
-                        <p class="mb-1">Non-highway roads carrying heavy traffic — the main arteries through a suburb or town. Examples: Rivonia Road, Jan Smuts Avenue, William Nicol Drive. Metropolitan M routes should typically be at least Primary Street.</p>
-                    </div>
-                    <div>
-                        <p class="font-bold text-slate-900">Street</p>
-                        <p class="mb-1">Any paved road not fitting into the above categories. Standard suburban and residential roads. Unpaved but well-defined roads should be Street type with the Unpaved checkbox ticked.</p>
-                    </div>
-                    <div>
-                        <p class="font-bold text-slate-900">Parking Lot Road</p>
-                        <p class="mb-1">Internal roads at parking areas, shopping centres, and office parks. Map the main entrance/exit and lanes leading to shop fronts only. Do not map every individual parking row.</p>
-                        <p class="text-xs text-slate-500 font-semibold">Important: Over-detailed parking lots clutter the map and can generate false traffic jam reports on nearby main roads.</p>
-                    </div>
-                    <div>
-                        <p class="font-bold text-slate-900">Private Road</p>
-                        <p class="mb-1">Roads not accessible to the general public — gated communities, military bases, private estates. Mark these as Private Road so Waze doesn't route through them. Examples: Dainfern in Fourways, security complexes with multiple entrances.</p>
-                    </div>
-                    <div>
-                        <p class="font-bold text-slate-900">Ramp</p>
-                        <p class="mb-1">Slip roads connecting the road network to freeways (between terminal ends). Must be one-way, connected at an obtuse angle. Not used as at-grade connectors for major/minor highways.</p>
-                    </div>
-                </div>
 
-                <h3 class="text-lg font-bold mb-2 text-slate-900">Road Naming Rules</h3>
-                <ul class="list-disc list-inside text-sm text-slate-600 space-y-1 mb-4">
-                    <li><strong>Basic naming:</strong> Use the English name and abbreviated suffix — even if the road also has an Afrikaans name</li>
-                    <li>Only abbreviate the suffix, not the road name itself — 'Circle Rd' not 'Cir Rd'</li>
-                    <li>Proper capitalisation: Rd, St, Ave — not rd, st, ave</li>
-                    <li>Be consistent: if a road is '1st Road' on signs, don't name it 'First Road' in Waze</li>
-                    <li>Use <strong>St.</strong> for Saint (e.g. St. Andrews Rd); <strong>Dr.</strong> for Doctor (e.g. Dr. Mahlangu Ave) — the period after the abbreviation is important</li>
-                </ul>
-                <p class="mb-4 text-xs text-slate-500 italic">Tip: When in doubt, spell it out. If a suffix abbreviation fails Text-to-Speech, use the full word.</p>
-
-                <p class="mb-2 text-sm text-slate-600 font-semibold">Common Suffix Abbreviations (SA)</p>
-                <div class="overflow-x-auto border border-slate-200 rounded-xl bg-white mb-6 text-xs font-medium text-slate-600">
-                    <table class="w-full text-left border-collapse">
-                        <thead>
-                            <tr class="bg-slate-50 border-b border-slate-200 text-slate-600 font-semibold"><th class="p-2.5">English</th><th class="p-2.5">Afrikaans</th><th class="p-2.5">Abbreviation</th><th class="p-2.5">TTS Works?</th></tr>
-                        </thead>
-                        <tbody class="divide-y divide-slate-100">
-                            <tr><td class="p-2.5">Avenue</td><td class="p-2.5">Laan</td><td class="p-2.5 font-bold">Ave</td><td class="p-2.5">Yes</td></tr>
-                            <tr><td class="p-2.5">Boulevard</td><td class="p-2.5">Rylaan</td><td class="p-2.5 font-bold">Blvd</td><td class="p-2.5">Yes</td></tr>
-                            <tr><td class="p-2.5">Circle</td><td class="p-2.5">Sirkel</td><td class="p-2.5 font-bold">Cir</td><td class="p-2.5">Yes</td></tr>
-                            <tr><td class="p-2.5 text-rose-700">Close</td><td class="p-2.5">—</td><td class="p-2.5 font-bold text-rose-700">Cl</td><td class="p-2.5 text-rose-700 font-semibold">No — spell out</td></tr>
-                            <tr><td class="p-2.5">Crescent</td><td class="p-2.5">Singel</td><td class="p-2.5 font-bold">Cres</td><td class="p-2.5">Yes</td></tr>
-                            <tr><td class="p-2.5">Drive</td><td class="p-2.5">Rylaan</td><td class="p-2.5 font-bold">Dr</td><td class="p-2.5">Yes</td></tr>
-                            <tr><td class="p-2.5">Lane</td><td class="p-2.5">Laan</td><td class="p-2.5 font-bold">Ln</td><td class="p-2.5">Yes</td></tr>
-                            <tr><td class="p-2.5">Place</td><td class="p-2.5">Oord</td><td class="p-2.5 font-bold">Pl</td><td class="p-2.5">Yes</td></tr>
-                            <tr><td class="p-2.5">Road</td><td class="p-2.5">Weg</td><td class="p-2.5 font-bold">Rd</td><td class="p-2.5">Yes</td></tr>
-                            <tr><td class="p-2.5">Square</td><td class="p-2.5">Plein</td><td class="p-2.5 font-bold">Sq</td><td class="p-2.5">Yes</td></tr>
-                            <tr><td class="p-2.5">Street</td><td class="p-2.5">Straat</td><td class="p-2.5 font-bold">St</td><td class="p-2.5">Yes</td></tr>
-                            <tr><td class="p-2.5">Way</td><td class="p-2.5">Baan</td><td class="p-2.5 font-bold">Way</td><td class="p-2.5">Yes</td></tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <h3 class="text-lg font-bold mb-2 text-slate-900">The City Field</h3>
-                <p class="mb-2 text-sm text-slate-600">Waze has one City field, but SA addresses have multiple levels. Use the <strong>Suburb, City</strong> format:</p>
-                <ul class="text-xs space-y-1 text-slate-600 list-disc list-inside mb-3">
-                    <li class="text-emerald-700 font-semibold">Correct: Morningside, Sandton</li>
-                    <li class="text-rose-700">Incorrect: Morningside, Johannesburg (old municipality name)</li>
-                    <li class="text-rose-700">Incorrect: Morningside, Sandton, Gauteng, South Africa (too much — country is its own field)</li>
-                </ul>
-                <p class="mb-4 text-sm text-slate-500 font-medium">Important: City and suburb names should start with a capital letter. Do not use ALL CAPS or non-standard capitalisation.</p>
-
-                <h3 class="text-lg font-bold mb-2 text-slate-900">Naming Numbered Routes</h3>
-                <div class="overflow-x-auto border border-slate-200 rounded-xl bg-white mb-4 text-xs font-medium text-slate-600">
-                    <table class="w-full text-left border-collapse">
-                        <thead>
-                            <tr class="bg-slate-50 border-b border-slate-200 text-slate-600 font-semibold"><th class="p-2.5">Road type</th><th class="p-2.5">Naming format</th><th class="p-2.5">Example</th></tr>
-                        </thead>
-                        <tbody class="divide-y divide-slate-100">
-                            <tr><td class="p-2.5">Freeway (no common name)</td><td class="p-2.5">Route number + cardinal</td><td class="p-2.5 font-mono">N1 N</td></tr>
-                            <tr><td class="p-2.5">Freeway (with common name)</td><td class="p-2.5">Common name (route + cardinal)</td><td class="p-2.5 font-mono">De Villiers Graaff Motorway (M1 N)</td></tr>
-                            <tr><td class="p-2.5">Major Highway</td><td class="p-2.5">Road name (route + cardinal)</td><td class="p-2.5 font-mono">Main Reef Rd (R41 W)</td></tr>
-                            <tr><td class="p-2.5">Minor Highway</td><td class="p-2.5">Road name (route + cardinal)</td><td class="p-2.5 font-mono">Kliprivier Dr (R556 S)</td></tr>
-                            <tr><td class="p-2.5">Primary Street (with M route)</td><td class="p-2.5">Road name (route + cardinal)</td><td class="p-2.5 font-mono">South Rand Rd (M38 W)</td></tr>
-                            <tr><td class="p-2.5">Primary Street (no route)</td><td class="p-2.5">Road name + cardinal</td><td class="p-2.5 font-mono">Bellairs Dr (E)</td></tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <h3 class="text-lg font-bold mb-2 text-slate-900">Cardinal Directions</h3>
-                <p class="mb-4 text-sm text-slate-600">Use cardinal directions (N, E, S, W) when a road has two separate carriageways with a median. The standard format is: <strong>ROAD NAME (ROUTE NUMBER CARDINAL)</strong>. Cardinals are spoken aloud by TTS, so drivers hear 'turn onto N1 North' and know which carriageway to use.</p>
-
-                <h3 class="text-lg font-bold mb-2 text-slate-900">Ramp Naming</h3>
-                <ul class="list-disc list-inside text-sm text-slate-600 space-y-1.5 mb-4">
-                    <li><strong>Exit ramps:</strong> EXIT NUMBER: ROAD NAME CARDINAL — e.g. <span class="font-mono bg-slate-100 px-1 rounded">Exit 402: N12 E</span></li>
-                    <li><strong>Entry ramps:</strong> ROAD NAME > DESTINATION — e.g. <span class="font-mono bg-slate-100 px-1 rounded">N12 > eMalahleni</span> (TTS reads '>' as 'towards')</li>
-                    <li><strong>Connecting ramps</strong> between entry/exit ramps: leave unnamed (no city, no name)</li>
-                </ul>
-                <p class="mb-6 text-xs text-slate-500 italic">Tip: Use streetview in WME to verify signage before naming ramps — the signs tell you exactly what to write.</p>
-
-                <h3 class="text-lg font-bold mb-2 text-slate-900">Speed Limits</h3>
-                <div class="overflow-x-auto border border-slate-200 rounded-xl bg-white mb-4 text-xs font-medium text-slate-600">
-                    <table class="w-full text-left border-collapse">
-                        <thead>
-                            <tr class="bg-slate-50 border-b border-slate-200 text-slate-600 font-semibold"><th class="p-2.5">Road type</th><th class="p-2.5">Typical speed limit</th></tr>
-                        </thead>
-                        <tbody class="divide-y divide-slate-100">
-                            <tr><td class="p-2.5">Freeway</td><td class="p-2.5">120 km/h</td></tr>
-                            <tr><td class="p-2.5">Major Highway</td><td class="p-2.5">100 km/h (sometimes 120 km/h)</td></tr>
-                            <tr><td class="p-2.5">Minor Highway</td><td class="p-2.5">80 km/h or 100 km/h</td></tr>
-                            <tr><td class="p-2.5">Primary Street</td><td class="p-2.5">60 km/h or 80 km/h</td></tr>
-                            <tr><td class="p-2.5">Street</td><td class="p-2.5">40 km/h</td></tr>
-                            <tr><td class="p-2.5">Ramps</td><td class="p-2.5">Leave blank unless a sign is visible in streetview</td></tr>
-                            <tr><td class="p-2.5">Private Road (PR) and Parking Lot Road (PLR) types</td><td class="p-2.5">We do not add speed limits</td></tr>
-                        </tbody>
-                    </table>
-                </div>
-                <p class="mb-6 text-sm text-slate-500 font-medium">Important: Always verify non-standard limits (e.g. 70 km/h) using streetview before entering them.</p>
-
-                <h3 class="text-lg font-bold mb-2 text-slate-900">Roundabouts (Traffic Circles)</h3>
-                <p class="mb-3 text-sm text-slate-600">South Africa has many roundabouts. A properly created roundabout gives drivers correct voice prompts.</p>
-                <ul class="list-disc list-inside text-sm text-slate-600 space-y-1 mb-4">
-                    <li>Always use the <strong>Roundabout tool</strong> in WME (shortcut <strong>O</strong>) — not just road segments shaped in a circle</li>
-                    <li>Set the city name if applicable, but leave the <strong>Name field as 'No Name'</strong></li>
-                    <li>The road type should match the <strong>highest road type</strong> connecting to the roundabout</li>
-                    <li>For very small 'mini' traffic circles where drivers can go straight over, it's often better not to create a roundabout — the geometry causes map errors</li>
-                </ul>
-
-                <h3 class="text-lg font-bold mb-2 text-slate-900">Splitting Dual Carriageways</h3>
-                <p class="text-sm text-slate-600 mb-2"><strong>Important:</strong> Think carefully before splitting a two-way road into two one-way segments.</p>
-                <p class="text-sm text-slate-600 mb-2">Incorrect splits cause U-turn suggestions, bad routing, and heavy ongoing maintenance at every intersection.</p>
-                <p class="text-xs text-slate-500 font-semibold">When in doubt, post in the SA Slack channel first.</p>
-            </section>
-
-            <section id="editing" class="scroll-mt-20 mb-16">
-                <div class="border-b border-slate-200 pb-4 mb-6">
-                    <span class="text-xs font-bold text-slate-400 uppercase tracking-wider font-mono">Guide | Page 4</span>
-                    <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight mt-1 text-slate-900">Creating and Editing Roads</h2>
-                    <p class="text-slate-500 text-sm mt-1">Step-by-step guide to adding and editing roads in WME</p>
-                </div>
-
-                <h3 class="text-lg font-bold mb-2 text-slate-900">Before You Draw Anything</h3>
-                <p class="mb-3 text-sm text-slate-600">Every road segment in Waze needs all of the following before it works correctly:</p>
-                <ul class="list-disc list-inside text-sm text-slate-600 space-y-1 mb-4">
-                    <li>Correct <strong>geometry</strong> (shape and position of the road)</li>
-                    <li>A <strong>road type</strong> (Freeway, Primary Street, Street, etc.)</li>
-                    <li>A <strong>name</strong> and <strong>city</strong> (unless it's a ramp or parking lot road)</li>
-                    <li>Correct <strong>direction</strong> (one-way or two-way)</li>
-                    <li>Correct <strong>turn permissions</strong> at every junction it connects to</li>
-                    <li><strong>Saved</strong> to the Waze server</li>
-                </ul>
-                <p class="mb-6 text-sm text-slate-500 font-semibold">Important: If you skip any of these, the road either won't appear in the app or won't route correctly.</p>
-
-                <h3 class="text-lg font-bold mb-3 text-slate-900">Drawing a New Road</h3>
-                <div class="space-y-4 text-sm text-slate-600 mb-6">
-                    <p><strong>Step 1: Start drawing</strong><br>
-                    Hover over the road icon in the top toolbar and click <strong>Road</strong>, or press <strong>I</strong>. Your cursor shows a small blue circle — you're in drawing mode. Starting on an existing segment automatically creates a junction there.</p>
+                    <h3 class="font-bold text-slate-900 mb-4 text-base">Editable Areas & Ranks</h3>
+                    <p class="text-gray-600 text-sm mb-4 leading-relaxed">Your editing perimeter matches the sectors you have driven along recently with Waze running, expiring after <strong>90 days</strong>. Editor ranks grow alongside verified map edits:</p>
                     
-                    <p><strong>Step 2: Follow the road</strong><br>
-                    Click along the path of the road. Each click creates a <strong>geometry node</strong>. Use satellite imagery or GPS tracks to follow the actual road. Click frequently on curves, just twice for straight sections.</p>
+                    <div class="grid sm:grid-cols-2 gap-4 text-sm">
+                        <div class="bg-white p-4 border border-gray-200 rounded-xl shadow-sm">
+                            <h4 class="font-bold text-slate-900 mb-2 border-b pb-2">Safe Moves for Beginners</h4>
+                            <ul class="space-y-1.5 text-xs text-gray-600">
+                                <li><i class="fa-solid fa-check text-green-500 mr-1.5"></i> Fixing minor name spelling typos</li>
+                                <li><i class="fa-solid fa-check text-green-500 mr-1.5"></i> Changing road directions (one-way/two-way)</li>
+                                <li><i class="fa-solid fa-check text-green-500 mr-1.5"></i> Setting allowed intersection turns</li>
+                            </ul>
+                        </div>
+                        <div class="bg-white p-4 border border-gray-200 rounded-xl shadow-sm">
+                            <h4 class="font-bold text-slate-900 mb-2 border-b pb-2">Avoid on Day 1</h4>
+                            <ul class="space-y-1.5 text-xs text-gray-600">
+                                <li><i class="fa-solid fa-xmark text-red-500 mr-1.5"></i> Deleting roads (wipes out speed history)</li>
+                                <li><i class="fa-solid fa-xmark text-red-500 mr-1.5"></i> Mapping every single shopping center lane</li>
+                                <li><i class="fa-solid fa-xmark text-red-500 mr-1.5"></i> Editing segments locked above your rank</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="guide-wme" class="doc-card mb-12 scroll-mt-24">
+                    <h2 class="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-3">
+                        <span class="p-2 bg-amber-100 text-amber-700 rounded-lg text-sm"><i class="fa-solid fa-keyboard"></i></span>
+                        WME Shortcuts Reference
+                    </h2>
+                    <p class="text-gray-600 mb-4 leading-relaxed">Toggle editing panels and features using these standard keyboard shortcuts:</p>
                     
-                    <p><strong>Step 3: Finish drawing</strong><br>
-                    Double-click at the endpoint to finish. The road appears in red — new/unsaved. Press <strong>Esc</strong> at any time to cancel drawing.</p>
+                    <div class="grid sm:grid-cols-3 gap-4 text-xs">
+                        <div class="bg-white p-4 border border-gray-200 rounded-xl shadow-sm">
+                            <h4 class="font-bold text-slate-900 mb-3 border-b pb-2">General Controls</h4>
+                            <div class="space-y-2">
+                                <div class="flex justify-between"><span>Show Shortcuts</span><kbd class="px-1.5 py-0.5 bg-gray-100 border border-gray-300 rounded font-mono text-[10px]">?</kbd></div>
+                                <div class="flex justify-between"><span>Save Changes</span><kbd class="px-1.5 py-0.5 bg-gray-100 border border-gray-300 rounded font-mono text-[10px]">Ctrl + S</kbd></div>
+                                <div class="flex justify-between"><span>Draw Road</span><kbd class="px-1.5 py-0.5 bg-gray-100 border border-gray-300 rounded font-mono text-[10px]">I</kbd></div>
+                            </div>
+                        </div>
+                        <div class="bg-white p-4 border border-gray-200 rounded-xl shadow-sm">
+                            <h4 class="font-bold text-slate-900 mb-3 border-b pb-2">Segment Adjustments</h4>
+                            <div class="space-y-2">
+                                <div class="flex justify-between"><span>Toggle Direction</span><kbd class="px-1.5 py-0.5 bg-gray-100 border border-gray-300 rounded font-mono text-[10px]">R</kbd></div>
+                                <div class="flex justify-between"><span>Delete Geometry Node</span><kbd class="px-1.5 py-0.5 bg-gray-100 border border-gray-300 rounded font-mono text-[10px]">D</kbd></div>
+                                <div class="flex justify-between"><span>Select Entire Street</span><kbd class="px-1.5 py-0.5 bg-gray-100 border border-gray-300 rounded font-mono text-[10px]">Ctrl + A</kbd></div>
+                            </div>
+                        </div>
+                        <div class="bg-white p-4 border border-gray-200 rounded-xl shadow-sm">
+                            <h4 class="font-bold text-slate-900 mb-3 border-b pb-2">Junction Turn Control</h4>
+                            <div class="space-y-2">
+                                <div class="flex justify-between"><span>Disallow All Turns</span><kbd class="px-1.5 py-0.5 bg-gray-100 border border-gray-300 rounded font-mono text-[10px]">Q</kbd></div>
+                                <div class="flex justify-between"><span>Allow All Turns</span><kbd class="px-1.5 py-0.5 bg-gray-100 border border-gray-300 rounded font-mono text-[10px]">W</kbd></div>
+                                <div class="flex justify-between"><span>Show Disallowed Turns</span><kbd class="px-1.5 py-0.5 bg-gray-100 border border-gray-300 rounded font-mono text-[10px]">Shift + Z</kbd></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="guide-naming" class="doc-card mb-12 scroll-mt-24">
+                    <h2 class="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-3">
+                        <span class="p-2 bg-amber-100 text-amber-700 rounded-lg text-sm"><i class="fa-solid fa-list-ol"></i></span>
+                        SA Naming Standards & Speed Limits
+                    </h2>
                     
-                    <p><strong>Step 4: Connect the road</strong><br>
-                    Both ends must connect to existing roads (or each other for a loop). A <strong>round junction node</strong> = connected. A <strong>square geometry node</strong> = NOT connected.</p>
-                </div>
-                <div class="bg-slate-100 p-4 rounded-xl border border-slate-200 mb-6 text-xs text-slate-600">
-                    <strong>Tip:</strong> If dragging one road onto another won't create a junction, drag it slightly past so they cross, then Ctrl+click both segments to get the intersection popup, and click the crossing point to connect them. Delete the small stub that sticks out.
-                </div>
+                    <h3 class="font-bold text-slate-900 mb-3 text-sm">The Suffix Rule</h3>
+                    <p class="text-gray-600 text-sm mb-4 leading-relaxed">Always use standard capitalized English abbreviations for street suffixes so text-to-speech works perfectly:</p>
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-6 text-xs text-center">
+                        <div class="p-2 bg-white border border-gray-200 rounded-lg"><span class="font-bold text-emerald-600 block">Elizabeth Ave</span>Correct</div>
+                        <div class="p-2 bg-white border border-gray-200 rounded-lg"><span class="font-bold text-red-600 block">Elizabeth Avenue</span>Incorrect</div>
+                        <div class="p-2 bg-white border border-gray-200 rounded-lg"><span class="font-bold text-emerald-600 block">Main Rd</span>Correct</div>
+                        <div class="p-2 bg-white border border-gray-200 rounded-lg"><span class="font-bold text-red-600 block">Main rd</span>Incorrect</div>
+                    </div>
 
-                <h3 class="text-lg font-bold mb-3 text-slate-900">Setting Road Properties</h3>
-                <p class="mb-2 text-sm text-slate-600"><strong>Address (Name and City)</strong><br>
-                Click the <strong>Edit</strong> button (or press <strong>E</strong>) to edit the address. Fields:</p>
-                <ul class="list-disc list-inside text-xs text-slate-600 space-y-1 mb-3 pl-2">
-                    <li>Country: Always South Africa</li>
-                    <li>City: Use Suburb, City format (e.g. Morningside, Sandton) — or 'None' for roads outside any municipality</li>
-                    <li>Street name: Road name with abbreviated suffix (e.g. Main Rd, Church St) — or 'None' for ramps and parking lot roads</li>
-                </ul>
-                <p class="text-sm text-rose-900 bg-rose-50 p-3 rounded-lg border border-rose-100 mb-4 font-medium">Important: Always click Apply after entering address details. If you click elsewhere without applying, your name changes are silently discarded.</p>
-                <p class="mb-6 text-sm text-slate-600">Roads with no name and city show as <strong>red roads</strong> in WME — this is a visual flag that the road needs attention.</p>
+                    <h3 class="font-bold text-slate-900 mb-3 text-sm">Typical Speed Limits Profile</h3>
+                    <div class="overflow-x-auto border border-gray-200 rounded-xl bg-white shadow-sm mb-6">
+                        <table class="w-full text-left border-collapse text-sm">
+                            <thead>
+                                <tr class="bg-slate-50 border-b border-gray-200 text-slate-700 font-semibold">
+                                    <th class="p-3">Type</th>
+                                    <th class="p-3">Standard Limit</th>
+                                    <th class="p-3">Type</th>
+                                    <th class="p-3">Standard Limit</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-gray-600 divide-y divide-gray-100">
+                                <tr>
+                                    <td class="p-3 font-medium text-slate-900">Freeway</td>
+                                    <td class="p-3">120 km/h</td>
+                                    <td class="p-3 font-medium text-slate-900">Primary Street</td>
+                                    <td class="p-3">60 or 80 km/h</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-3 font-medium text-slate-900">Major Highway</td>
+                                    <td class="p-3">100 or 120 km/h</td>
+                                    <td class="p-3 font-medium text-slate-900">Standard Street</td>
+                                    <td class="p-3">40 km/h</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
 
-                <p class="mb-2 text-sm text-slate-600 font-semibold">Direction</p>
-                <div class="overflow-x-auto border border-slate-200 rounded-xl bg-white mb-4 text-xs font-medium text-slate-600">
-                    <table class="w-full text-left border-collapse">
-                        <thead>
-                            <tr class="bg-slate-50 border-b border-slate-200 text-slate-600 font-semibold"><th class="p-2.5">Setting</th><th class="p-2.5">When to use</th></tr>
-                        </thead>
-                        <tbody class="divide-y divide-slate-100">
-                            <tr><td class="p-2.5 font-bold">Two-way</td><td class="p-2.5">Normal streets, most roads</td></tr>
-                            <tr><td class="p-2.5 font-bold">One-way (A→B)</td><td class="p-2.5">One-way streets, one carriageway of a divided road</td></tr>
-                            <tr><td class="p-2.5 font-bold">One-way (B→A)</td><td class="p-2.5">One-way streets going the other direction</td></tr>
-                            <tr><td class="p-2.5 font-bold">Unknown</td><td class="p-2.5">Leave this for the routing engine — only for undriven base map roads</td></tr>
-                        </tbody>
-                    </table>
-                </div>
-                <p class="mb-6 text-sm text-slate-500 font-medium">Important: Avoid 'Unknown' for roads you can verify. Unknown roads are auto-adjusted based on how drivers travel them, which can cause brief routing errors.</p>
-
-                <p class="mb-2 text-sm text-slate-600 font-semibold">Speed Limit</p>
-                <p class="mb-6 text-sm text-slate-600">Enter the speed limit in km/h. Check that your WME settings use km/h, not mph. Leave ramp speed limits blank unless a sign is visible in streetview.</p>
-
-                <p class="mb-2 text-sm text-slate-600 font-semibold">Elevation</p>
-                <div class="overflow-x-auto border border-slate-200 rounded-xl bg-white mb-4 text-xs font-medium text-slate-600">
-                    <table class="w-full text-left border-collapse">
-                        <thead>
-                            <tr class="bg-slate-50 border-b border-slate-200 text-slate-600 font-semibold"><th class="p-2.5">Elevation</th><th class="p-2.5">When to use</th></tr>
-                        </thead>
-                        <tbody class="divide-y divide-slate-100">
-                            <tr><td class="p-2.5 font-bold">Ground (0)</td><td class="p-2.5">Default for all normal roads</td></tr>
-                            <tr><td class="p-2.5 font-bold">+1, +2, etc.</td><td class="p-2.5">Road is on a bridge or elevated over another road</td></tr>
-                            <tr><td class="p-2.5 font-bold">-1, -2, etc.</td><td class="p-2.5">Road is in a tunnel or underpass</td></tr>
-                            <tr><td class="p-2.5 font-bold">-5</td><td class="p-2.5">Non-drivable roads (walking trails, etc.) — prevents false routing</td></tr>
-                        </tbody>
-                    </table>
-                </div>
-                <p class="mb-6 text-xs text-slate-500 italic">Tip: Two roads at the same elevation that overlap will trigger a 'possible junction needed' error. Set them to different levels to avoid false alerts.</p>
-
-                <h3 class="text-lg font-bold mb-3 text-slate-900">Adjusting Road Geometry</h3>
-                <p class="mb-3 text-sm text-slate-600">To fix the shape of an existing road:</p>
-                <ul class="list-disc list-inside text-sm text-slate-600 space-y-1 mb-4 pl-2">
-                    <li>Click on the segment to select it</li>
-                    <li>Hover over the segment — geometry nodes (white circles) and inter-geometry nodes (light blue dots) appear</li>
-                    <li>Drag any node to reposition it</li>
-                    <li>Press <strong>D</strong> while hovering over a node to delete it</li>
-                </ul>
-                <p class="mb-6 text-xs text-slate-500 italic">Tip: Hold D while moving the mouse over nodes — they delete automatically as the cursor passes. Great for cleaning up straight roads with excess nodes.</p>
-
-                <h3 class="text-lg font-bold mb-3 text-slate-900">Junctions</h3>
-                <div class="space-y-4 text-sm text-slate-600 mb-6">
-                    <p><strong>Moving a junction:</strong> Click the junction node (it turns into a blue circle with a 4-way arrow cursor), click and drag to the new location, then adjust any geometry nodes that got pulled out of position.</p>
-                    <p><strong>Removing a two-segment junction (bridging):</strong> If a junction connects only two segments and there's no reason for it to exist: click the junction node. If the trash can icon appears at the top right, click it (or press Delete). If no trash can appears, the two segments have different properties — check road type, name, city, direction, or speed limit.</p>
-                    <p><strong>Cutting a segment at a specific point:</strong> Draw a short new road starting on the existing segment at the split point, delete the new road you just drew. The junction stays — the original segment is now split at that point.</p>
+                    <div class="bg-slate-900 text-white p-5 rounded-xl text-sm shadow-sm">
+                        <h4 class="font-bold text-amber-400 mb-2"><i class="fa-solid fa-map-pin"></i> Suburb Assignment Rule</h4>
+                        <p class="leading-relaxed text-xs text-slate-300">Always follow the <strong>"Suburb, City"</strong> pattern in the address field to keep alerts clean (e.g., <em>"Morningside, Sandton"</em> instead of old regional descriptors).</p>
+                    </div>
                 </div>
 
-                <h3 class="text-lg font-bold mb-2 text-slate-900">Turn Restrictions</h3>
-                <p class="mb-4 text-sm text-slate-600">Turn restrictions control which directions drivers are allowed to go at a junction. Green arrows = allowed. Red arrows = not allowed.</p>
-                <div class="space-y-4 text-sm text-slate-600 mb-4">
-                    <p><strong>Setting turns:</strong> Click a segment to see its turn arrows. Click a red arrow to allow that turn (turns green). Click a green arrow to disallow it (turns red).</p>
-                    <p><strong>Allowing all turns at a junction:</strong> Click the junction node (not a segment). Click Allow all turns in the left panel, or press <strong>W</strong>.</p>
-                </div>
-                <div class="bg-slate-900 text-slate-200 p-4 rounded-xl font-mono text-xs sm:text-sm mb-4 shadow-inner">
-                    <p class="text-slate-500 font-bold">// Best practice for new junctions</p>
-                    <p class="text-slate-300"><strong>Important:</strong> Always do this after creating a new junction:</p>
-                    <p>1. Click the junction node</p>
-                    <p>2. Press <strong>Q</strong> to disallow all turns</p>
-                    <p>3. Press <strong>W</strong> to allow all turns</p>
-                    <p>4. Then manually restrict any turns not allowed in real life.</p>
-                    <p class="text-slate-500 mt-1">// The Q+W sequence clears invisible 'soft' restrictions that silently block valid routing.</p>
-                </div>
-                <p class="mb-6 text-xs text-slate-500 italic">Tip: Press Shift+Z to toggle a view showing all disallowed turns across every visible junction. Zoom out to ~500m, scan the area, and fix any red arrows that shouldn't be there.</p>
+                <div id="guide-editing" class="doc-card mb-12 scroll-mt-24">
+                    <h2 class="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-3">
+                        <span class="p-2 bg-amber-100 text-amber-700 rounded-lg text-sm"><i class="fa-solid fa-pen-to-square"></i></span>
+                        Creating & Editing Roads
+                    </h2>
+                    <p class="text-gray-600 mb-4 leading-relaxed">Every active segment must have accurate geometry, direction, properties, and turn restrictions before being uploaded to live servers.</p>
+                    
+                    <div class="bg-amber-50 border-l-4 border-amber-500 p-4 rounded-r-xl text-xs mb-6">
+                        <strong class="text-amber-900 block mb-1">Important Sequence for Junction Creation:</strong>
+                        To clear hidden, soft turn restrictions that can break route choices, always follow this order: Select Junction Node &rarr; Press <kbd class="px-1 bg-white border border-gray-300 rounded font-mono">Q</kbd> to block all turns &rarr; Press <kbd class="px-1 bg-white border border-gray-300 rounded font-mono">W</kbd> to allow all turns &rarr; Manually apply real-world red restrictions.
+                    </div>
 
-                <h3 class="text-lg font-bold mb-2 text-slate-900">Saving</h3>
-                <p class="mb-6 text-sm text-slate-600">Click the <strong>Save</strong> button or press <strong>Ctrl+S</strong>. Save every 10–20 meaningful changes. If you get a save error, hover over the save button to identify the cause. If you can't resolve the error, undo recent changes one by one until the save works.</p>
+                    <h3 class="font-bold text-slate-900 mb-3 text-sm">Elevation Matrix Rules</h3>
+                    <p class="text-gray-600 text-sm mb-4 leading-relaxed">Manage elevation heights carefully to avoid overlap errors on underpasses or bridges:</p>
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs text-center">
+                        <div class="p-3 bg-white border border-gray-200 rounded-xl shadow-sm"><span class="font-bold text-slate-900 block text-lg mb-1">0</span>Ground Level</div>
+                        <div class="p-3 bg-white border border-gray-200 rounded-xl shadow-sm"><span class="font-bold text-slate-900 block text-lg mb-1">+1 / +2</span>Overpass Bridges</div>
+                        <div class="p-3 bg-white border border-gray-200 rounded-xl shadow-xl"><span class="font-bold text-slate-900 block text-lg mb-1">-1 / -2</span>Tunnels / Underpasses</div>
+                        <div class="p-3 bg-white border border-gray-200 rounded-xl shadow-sm"><span class="font-bold text-slate-900 block text-lg mb-1">-5</span>Non-drivable tracks</div>
+                    </div>
+                </div>
 
-                <h3 class="text-lg font-bold mb-3 text-slate-900">Common Mistakes to Avoid</h3>
-                <div class="overflow-x-auto border border-slate-200 rounded-xl bg-white mb-6 text-xs sm:text-sm">
-                    <table class="w-full text-left border-collapse">
-                        <thead>
-                            <tr class="bg-slate-50 border-b border-slate-200 text-slate-600 font-semibold"><th class="p-2.5">Mistake</th><th class="p-2.5">Why it's a problem</th></tr>
-                        </thead>
-                        <tbody class="divide-y divide-slate-100 text-slate-600 font-medium">
-                            <tr><td class="p-2.5">Drawing roads not connected to the network</td><td class="p-2.5">Waze can't route to or from an isolated road</td></tr>
-                            <tr><td class="p-2.5">Leaving geometry nodes all over a straight road</td><td class="p-2.5">Extra nodes slow the database and complicate future edits</td></tr>
-                            <tr><td class="p-2.5">Not setting turn restrictions after creating a junction</td><td class="p-2.5">Default leaves 'soft restricted' turns that silently break routing</td></tr>
-                            <tr><td class="p-2.5">Adding a new segment in the middle of a busy road</td><td class="p-2.5">New segments have no traffic history — causes weird routing until data builds up</td></tr>
-                            <tr><td class="p-2.5">Setting direction to 'Unknown'</td><td class="p-2.5">Only appropriate for undriven base map roads</td></tr>
-                            <tr><td class="p-2.5">Forgetting to click Apply after editing road names</td><td class="p-2.5">WME won't warn you — changes are silently discarded</td></tr>
-                        </tbody>
-                    </table>
+                <div id="guide-locking" class="doc-card mb-12 scroll-mt-24">
+                    <h2 class="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-3">
+                        <span class="p-2 bg-amber-100 text-amber-700 rounded-lg text-sm"><i class="fa-solid fa-lock"></i></span>
+                        Locking Levels, Places, & Toll Roads
+                    </h2>
+                    <p class="text-gray-600 mb-4 leading-relaxed">Lock properties protect confirmed layouts from accidental edits by newer accounts.</p>
+                    
+                    <div class="grid sm:grid-cols-2 gap-6">
+                        <div>
+                            <h3 class="font-bold text-slate-900 mb-3 text-sm">Road Lock Level Baseline</h3>
+                            <ul class="space-y-2 text-xs text-gray-600 bg-white p-4 border border-gray-200 rounded-xl shadow-sm">
+                                <li class="flex justify-between border-b pb-1"><span>Freeways (N-routes)</span><span class="font-bold text-slate-900">Level 5</span></li>
+                                <li class="flex justify-between border-b pb-1"><span>Major Highways (Rxx)</span><span class="font-bold text-slate-900">Level 4</span></li>
+                                <li class="flex justify-between border-b pb-1"><span>Minor Highways (Rxxx)</span><span class="font-bold text-slate-900">Level 3</span></li>
+                                <li class="flex justify-between border-b pb-1"><span>Primary Streets</span><span class="font-bold text-slate-900">Level 2</span></li>
+                                <li class="flex justify-between"><span>Standard Streets</span><span class="font-bold text-slate-900">Level 1</span></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-slate-900 mb-3 text-sm">Toll Roads Rules</h3>
+                            <p class="text-gray-600 text-xs leading-relaxed mb-3">Drivers can choose to bypass tolls via app preferences. Only select the <strong>'Toll Road'</strong> property checkbox on the exact segment passing through the physical gate or gantry—never flag the entire highway line.</p>
+                            <div class="p-3 bg-slate-50 border rounded-lg text-[11px] text-gray-500">
+                                <strong>Major Operators:</strong> SANRAL (National Routes), Bakwena (N1/N4 North), N3TC (KZN Corridors), TRAC (N4 East corridor).
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="guide-avoid" class="doc-card scroll-mt-24">
+                    <h2 class="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-3">
+                        <span class="p-2 bg-red-100 text-red-700 rounded-lg text-sm"><i class="fa-solid fa-ban"></i></span>
+                        Edits to Avoid
+                    </h2>
+                    <div class="grid sm:grid-cols-3 gap-4 text-xs text-gray-600">
+                        <div class="bg-white p-4 border border-gray-200 rounded-xl shadow-sm">
+                            <h4 class="font-bold text-red-600 mb-2">Unnecessary Splitting</h4>
+                            <p class="leading-relaxed">Do not split standard two-way roads into distinct one-way lines unless they feature a wide, physical structural meridian divider.</p>
+                        </div>
+                        <div class="bg-white p-4 border border-gray-200 rounded-xl shadow-sm">
+                            <h4 class="font-bold text-red-600 mb-2">Private Farm Paths</h4>
+                            <p class="leading-relaxed">Avoid drawing isolated rural property lanes or extreme 4x4 courses. If mapped, verify the <strong>Unpaved</strong> checkbox property is turned on.</p>
+                        </div>
+                        <div class="bg-white p-4 border border-gray-200 rounded-xl shadow-sm">
+                            <h4 class="font-bold text-red-600 mb-2">Renaming Updates</h4>
+                            <p class="leading-relaxed">When roads are officially renamed, change the primary field to the new designation and move the old name to the <strong>Alternate Name</strong> field.</p>
+                        </div>
+                    </div>
                 </div>
             </section>
 
-            <section id="locking" class="scroll-mt-20 mb-16">
-                <div class="border-b border-slate-200 pb-4 mb-6">
-                    <span class="text-xs font-bold text-slate-400 uppercase tracking-wider font-mono">Guide | Page 5</span>
-                    <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight mt-1 text-slate-900">Locking, Places, Toll Roads & Roles</h2>
-                    <p class="text-slate-500 text-sm mt-1">SA lock levels, points of interest, toll roads, and community roles</p>
-                </div>
-
-                <h3 class="text-lg font-bold mb-2 text-slate-900">Segment Locking</h3>
-                <p class="mb-4 text-sm text-slate-600">Locking a segment protects it from being accidentally edited by lower-ranked editors. Only lock a road once it has been verified as correct — correct geometry, name, road type, and turn restrictions.</p>
-                
-                <p class="mb-2 text-sm text-slate-600 font-semibold">SA Lock Level Guidelines</p>
-                <div class="overflow-x-auto border border-slate-200 rounded-xl bg-white mb-4 text-xs sm:text-sm">
-                    <table class="w-full text-left border-collapse">
-                        <thead>
-                            <tr class="bg-slate-50 border-b border-slate-200 text-slate-600 font-semibold"><th class="p-2.5">Road type</th><th class="p-2.5">Minimum lock level</th></tr>
-                        </thead>
-                        <tbody class="divide-y divide-slate-100 text-slate-600 font-medium">
-                            <tr><td class="p-2.5">Freeway (N routes) including ramps and junctions</td><td class="p-2.5 text-rose-600 font-bold">Level 5</td></tr>
-                            <tr><td class="p-2.5">Major Highway (two-digit R or N routes)</td><td class="p-2.5 text-rose-600 font-bold">Level 4</td></tr>
-                            <tr><td class="p-2.5">Minor Highway (three-digit R routes)</td><td class="p-2.5 text-amber-600 font-bold">Level 3</td></tr>
-                            <tr><td class="p-2.5">Primary Streets</td><td class="p-2.5 text-sky-600 font-bold">Level 2</td></tr>
-                            <tr><td class="p-2.5">Standard Streets</td><td class="p-2.5 text-slate-400">Level 1 (default)</td></tr>
-                            <tr><td class="p-2.5">Toll gantry/gantry segments</td><td class="p-2.5 text-rose-600 font-bold">Level 5 or higher</td></tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <p class="mb-2 text-sm text-slate-600 font-semibold">Special Situations</p>
-                <ul class="list-disc list-inside text-sm text-slate-600 space-y-1 mb-4">
-                    <li><strong>Roads not matching aerials:</strong> Lock to L4 if geometry is confirmed correct but imagery is outdated</li>
-                    <li><strong>Unexpected configurations:</strong> Lock unusual but intentional features to prevent reversion; add a map comment explaining why</li>
-                    <li><strong>Vandalism:</strong> Lock after discussion with the community and ZA Country Admin approval</li>
-                </ul>
-                <p class="text-xs text-slate-500 italic mb-6">Note: Level 6 locks are not currently used in South Africa as there are insufficient Level 6 editors in the country.</p>
-
-                <h3 class="text-lg font-bold mb-3 text-slate-900">Places (Points of Interest)</h3>
-                <div class="space-y-4 text-sm text-slate-600 mb-6">
-                    <p><strong>Area vs. Point:</strong><br>
-                    <strong>Area place:</strong> Physical footprint larger than 40m x 40m (smallest size visible on app at max zoom)<br>
-                    <strong>Point place:</strong> Smaller than 40m x 40m, or businesses inside a larger building or complex</p>
-                    
-                    <p><strong>Minimum info required for L1 lock:</strong> Category, Name, Street, City, Country</p>
-                    <p><strong>Extended info for a fully completed place (L3):</strong> All basic information plus: linked Google Place, website, phone number, opening times, relevant facilities</p>
-                </div>
-
-                <p class="mb-2 text-sm text-slate-600 font-semibold">SA Place Lock Levels</p>
-                <div class="overflow-x-auto border border-slate-200 rounded-xl bg-white mb-4 text-xs">
-                    <table class="w-full text-left border-collapse">
-                        <thead>
-                            <tr class="bg-slate-50 border-b border-slate-200 text-slate-600 font-semibold"><th class="p-2">Place type</th><th class="p-2">Lock</th><th class="p-2">Area/Point</th></tr>
-                        </thead>
-                        <tbody class="divide-y divide-slate-100 text-slate-600 font-medium">
-                            <tr><td class="p-2">Airport</td><td class="p-2 font-bold text-rose-600">5</td><td class="p-2">Area</td></tr>
-                            <tr><td class="p-2">Hospital / Emergency Care</td><td class="p-2 font-bold text-rose-600">4</td><td class="p-2">Area</td></tr>
-                            <tr><td class="p-2">Police Station</td><td class="p-2 font-bold text-amber-600">3</td><td class="p-2">Area</td></tr>
-                            <tr><td class="p-2">Fire Station (first-response)</td><td class="p-2 font-bold text-amber-600">3</td><td class="p-2">Area</td></tr>
-                            <tr><td class="p-2">Military</td><td class="p-2 font-bold text-rose-600">4</td><td class="p-2">Area</td></tr>
-                            <tr><td class="p-2">Government</td><td class="p-2 font-bold text-rose-600">4</td><td class="p-2">Point</td></tr>
-                            <tr><td class="p-2">Courthouse</td><td class="p-2 font-bold text-amber-600">3</td><td class="p-2">Area</td></tr>
-                            <tr><td class="p-2">Embassy / Consulate</td><td class="p-2 font-bold text-amber-600">3</td><td class="p-2">Point</td></tr>
-                            <tr><td class="p-2">Toll Gantry / Interchange</td><td class="p-2 font-bold text-rose-600">4</td><td class="p-2">Area</td></tr>
-                            <tr><td class="p-2">Tunnel / Bridge</td><td class="p-2 font-bold text-amber-600">3</td><td class="p-2">Area</td></tr>
-                            <tr><td class="p-2">Park</td><td class="p-2 font-bold text-amber-600">3</td><td class="p-2">Area</td></tr>
-                            <tr><td class="p-2">Gas Station / Petrol Station</td><td class="p-2 font-bold text-amber-600">3</td><td class="p-2">Area</td></tr>
-                            <tr><td class="p-2">EV Charging Station</td><td class="p-2 font-bold text-amber-600">3</td><td class="p-2">Point</td></tr>
-                            <tr><td class="p-2">College / University</td><td class="p-2 font-bold text-amber-600">3</td><td class="p-2">Area</td></tr>
-                            <tr><td class="p-2">School</td><td class="p-2 font-bold text-sky-600">2</td><td class="p-2">Area</td></tr>
-                            <tr><td class="p-2">Train Station</td><td class="p-2 font-bold text-sky-600">2</td><td class="p-2">Area</td></tr>
-                            <tr><td class="p-2">Bus Station</td><td class="p-2 font-bold text-sky-600">2</td><td class="p-2">Area</td></tr>
-                            <tr><td class="p-2">Taxi Rank</td><td class="p-2 font-bold text-sky-600">2</td><td class="p-2">Area</td></tr>
-                            <tr><td class="p-2">Car Dealership</td><td class="p-2 font-bold text-sky-600">2</td><td class="p-2">Area</td></tr>
-                            <tr><td class="p-2">Casino</td><td class="p-2 font-bold text-sky-600">2</td><td class="p-2">Area</td></tr>
-                            <tr><td class="p-2">Stadium / Arena</td><td class="p-2 font-bold text-sky-600">2</td><td class="p-2">Area</td></tr>
-                            <tr><td class="p-2">Residential Complex</td><td class="p-2 font-bold text-sky-600">2</td><td class="p-2">Area</td></tr>
-                            <tr><td class="p-2">All other commercial places</td><td class="p-2 text-slate-400">1</td><td class="p-2">Point or Area</td></tr>
-                        </tbody>
-                    </table>
-                </div>
-                <p class="mb-6 text-xs text-slate-500 italic">Tip: When approving or rejecting place photo updates, photos must clearly show the place from outside, with no people, car interiors, or blurry images.</p>
-
-                <h3 class="text-lg font-bold mb-2 text-slate-900">Toll Roads in South Africa</h3>
-                <p class="mb-3 text-sm text-slate-600">The Waze 'Avoid Toll Roads' option is active in South Africa. Any segment where a driver must pay must be correctly marked for Waze to offer alternative routing.</p>
-                <p class="mb-2 text-sm text-slate-600 font-semibold">How to mark a toll road</p>
-                <ul class="list-disc list-inside text-sm text-slate-600 space-y-1 mb-4 pl-2">
-                    <li>Check the <strong>Toll road</strong> checkbox in the segment properties for the specific segment at the toll gate/gantry</li>
-                    <li>Do NOT mark the entire highway as toll — only the segment at the actual gantry location</li>
-                    <li>Add a junction node at the toll location to prevent false traffic jam pop-ups</li>
-                </ul>
-
-                <p class="mb-2 text-sm text-slate-600 font-semibold">SA Toll Operators</p>
-                <div class="overflow-x-auto border border-slate-200 rounded-xl bg-white mb-4 text-xs sm:text-sm">
-                    <table class="w-full text-left border-collapse">
-                        <thead>
-                            <tr class="bg-slate-50 border-b border-slate-200 text-slate-600 font-semibold"><th class="p-2.5">Operator</th><th class="p-2.5">Routes</th></tr>
-                        </thead>
-                        <tbody class="divide-y divide-slate-100 text-slate-600 font-medium">
-                            <tr><td class="p-2.5 font-bold">SANRAL</td><td class="p-2.5">Most national toll roads</td></tr>
-                            <tr><td class="p-2.5 font-bold">Bakwena</td><td class="p-2.5">N1 North (Pretoria to Bela-Bela) and N4 West (Pretoria to Botswana border)</td></tr>
-                            <tr><td class="p-2.5 font-bold">N3TC</td><td class="p-2.5">N3 (Johannesburg to Durban)</td></tr>
-                            <tr><td class="p-2.5 font-bold">TRAC</td><td class="p-2.5">N4 East (Pretoria to Mozambique border)</td></tr>
-                            <tr><td class="p-2.5 font-bold">Entilini</td><td class="p-2.5">M6 Chapman's Peak Drive (Cape Town)</td></tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <p class="mb-2 text-sm text-slate-600 font-semibold">Key Mainline Toll Plazas</p>
-                <div class="overflow-x-auto border border-slate-200 rounded-xl bg-white mb-6 text-xs sm:text-sm">
-                    <table class="w-full text-left border-collapse">
-                        <thead>
-                            <tr class="bg-slate-50 border-b border-slate-200 text-slate-600 font-semibold"><th class="p-2.5">Route</th><th class="p-2.5">Operator</th><th class="p-2.5">Plaza</th></tr>
-                        </thead>
-                        <tbody class="divide-y divide-slate-100 text-slate-600 font-medium">
-                            <tr><td class="p-2.5 font-bold">N1</td><td class="p-2.5">Bakwena</td><td class="p-2.5">Pumulani, Carousel</td></tr>
-                            <tr><td class="p-2.5 font-bold">N1</td><td class="p-2.5">SANRAL</td><td class="p-2.5">Huguenot, Grasmere, Kranskop, Verkeerdevlei</td></tr>
-                            <tr><td class="p-2.5 font-bold">N2</td><td class="p-2.5">SANRAL</td><td class="p-2.5">Tsitsikamma, Oribi, Tongaat, Mvoti</td></tr>
-                            <tr><td class="p-2.5 font-bold">N3</td><td class="p-2.5">N3TC</td><td class="p-2.5">Mooi, Tugela, Wilge, De Hoek</td></tr>
-                            <tr><td class="p-2.5 font-bold">N3</td><td class="p-2.5">SANRAL</td><td class="p-2.5">Mariannhill</td></tr>
-                            <tr><td class="p-2.5 font-bold">N4</td><td class="p-2.5">Bakwena</td><td class="p-2.5">Marikana, Doornpoort</td></tr>
-                            <tr><td class="p-2.5 font-bold">N4</td><td class="p-2.5">TRAC</td><td class="p-2.5">Diamond Hill, Middelburg, Machado, Nkomazi</td></tr>
-                            <tr><td class="p-2.5 font-bold">N17</td><td class="p-2.5">SANRAL</td><td class="p-2.5">Gosforth, Dalpark</td></tr>
-                            <tr><td class="p-2.5 font-bold">M6</td><td class="p-2.5">Entilini</td><td class="p-2.5">Chapman's Peak (N/S)</td></tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <h3 class="text-lg font-bold mb-2 text-slate-900">Roles in the SA Waze Community</h3>
-                <div class="overflow-x-auto border border-slate-200 rounded-xl bg-white mb-6 text-xs sm:text-sm">
-                    <table class="w-full text-left border-collapse">
-                        <thead>
-                            <tr class="bg-slate-50 border-b border-slate-200 text-slate-600 font-semibold"><th class="p-2.5">Role</th><th class="p-2.5">Description</th></tr>
-                        </thead>
-                        <tbody class="divide-y divide-slate-100 text-slate-600 font-medium">
-                            <tr><td class="p-2.5 font-bold">Area Manager (AM)</td><td class="p-2.5">Manages a defined geographic area. Can edit anything in their area regardless of editing rank (with exceptions for segments locked above their rank). Any rank can be granted AM rights.</td></tr>
-                            <tr><td class="p-2.5 font-bold">Country Manager (CM) / ZA Country Admin</td><td class="p-2.5">Oversees the entire SA map. Elevated permissions for locking, unlocking, approving AM applications, and coordinating map quality nationally. Approves promotions to Level 4 and above.</td></tr>
-                            <tr><td class="p-2.5 font-bold">Waze Champ (Level 6)</td><td class="p-2.5">Most experienced editors. Active in forums, contribute to the wiki, direct contact with Waze development. Can be contacted via Private Message for sensitive questions.</td></tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <p class="mb-2 text-sm text-slate-600 font-semibold">The Promotion Process</p>
-                <div class="overflow-x-auto border border-slate-200 rounded-xl bg-white mb-4 text-xs sm:text-sm">
-                    <table class="w-full text-left border-collapse">
-                        <thead>
-                            <tr class="bg-slate-50 border-b border-slate-200 text-slate-600 font-semibold"><th class="p-2.5">Promotion</th><th class="p-2.5">Process</th></tr>
-                        </thead>
-                        <tbody class="divide-y divide-slate-100 text-slate-600 font-medium">
-                            <tr><td class="p-2.5 font-bold">Level 1 → Level 2</td><td class="p-2.5">Automatic after ~3,000 edits, subject to quality</td></tr>
-                            <tr><td class="p-2.5 font-bold">Level 2 → Level 3</td><td class="p-2.5">Automatic after ~25,000 edits, subject to quality</td></tr>
-                            <tr><td class="p-2.5 font-bold">Level 3 → Level 4</td><td class="p-2.5">Requires review — contact your Country Manager to initiate</td></tr>
-                            <tr><td class="p-2.5 font-bold">Level 4 → Level 5</td><td class="p-2.5">Requires review at national/regional level</td></tr>
-                            <tr><td class="p-2.5 font-bold">Level 5 → Level 6</td><td class="p-2.5">By invitation and review from existing Champs</td></tr>
-                        </tbody>
-                    </table>
-                </div>
-                <p class="mb-4 text-xs text-slate-500 italic">* Quality over quantity & at discretion by leadership</p>
-                <p class="mb-6 text-xs text-slate-500 italic">Tip: If you think you're ready for a promotion, contact your Country Manager. Introduce yourself, share your edit history, and ask for a review.</p>
-
-                <h3 class="text-lg font-bold mb-2 text-slate-900">Copyrighted Material</h3>
-                <ul class="list-disc list-inside text-sm text-slate-600 space-y-1">
-                    <li>You can consult map books or road sign photos to verify road names</li>
-                    <li>You can use Google Maps to verify a road's approximate location</li>
-                    <li class="text-rose-700 font-semibold">Do not trace roads from Google Maps or Google aerial/satellite images — copyright infringement</li>
-                    <li>Preferred alternatives: Waze's own satellite imagery (already licensed) and GPS tracks</li>
-                    <li>Official SA sources: Surveyor General (csg.dla.gov.za) and National Geospatial Information (ngi.gov.za)</li>
-                </ul>
-            </section>
-
-            <section id="best-practices" class="scroll-mt-20 mb-16">
-                <div class="border-b border-slate-200 pb-4 mb-6">
-                    <span class="text-xs font-bold text-slate-400 uppercase tracking-wider font-mono">Guide | Page 6</span>
-                    <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight mt-1 text-slate-900">Best Practices & Edits to Avoid</h2>
-                    <p class="text-slate-500 text-sm mt-1">What to do, what not to do, and SA-specific tips from the community</p>
-                </div>
-
-                <div class="bg-sky-50 border-l-4 border-sky-400 p-4 rounded-r-lg mb-6 text-sm text-sky-900">
-                    <strong class="block mb-0.5">The Core Principle</strong>
-                    Keep it simple. Make it useful. Don't lose data. Every edit you make affects real commuters. A well-intentioned but incorrect edit can send hundreds of drivers the wrong way. An accidental deletion can wipe out years of traffic data. When you're unsure, ask in Slack before editing.
-                </div>
-
-                <h3 class="text-lg font-bold mb-2 text-slate-900">General Best Practices</h3>
-                <div class="space-y-4 text-sm text-slate-600 mb-6">
-                    <p><strong>1. Verify before you edit:</strong> Don't just fix what looks wrong — confirm it's actually wrong using Streetview to check signage, GPS tracks layer (Shift+G), Satellite imagery (Shift+I), or Livemap to test actual routing.</p>
-                    <p><strong>2. Fix turn restrictions every time you create a junction:</strong> Click the junction node, press Q (disallow all), press W (allow all), and manually restrict any turns not allowed in real life. Skipping this leaves invisible 'soft' turn restrictions.</p>
-                    <p><strong>3. Use Shift+Z after working on an area:</strong> This shows all disallowed turns on every visible junction. Zoom out to ~100–500m, scan the area, and fix any red arrows that shouldn't be there.</p>
-                    <p><strong>4. Keep geometry clean:</strong> Delete unnecessary nodes on straight roads (hover + press D). Excess nodes slow the database. After adjusting geometry, verify your changes against satellite imagery.</p>
-                    <p><strong>5. Save early, save often:</strong> Save after every meaningful group of changes to limit work lost and ensure edits go live sooner.</p>
-                    <p><strong>6. Don't add new segments into busy roads:</strong> When adding a connecting road or fixing a junction in the middle of an existing road, split the existing segment rather than drawing a new one from scratch. Splitting preserves data history.</p>
-                    <p><strong>7. Test routing on Livemap:</strong> For anything involving major roads, junctions, or turn restrictions — open Livemap and test the route you expect people to take.</p>
-                </div>
-
-                <h3 class="text-lg font-bold mb-2 text-slate-900">Edits to Avoid</h3>
-                <div class="space-y-4 text-sm text-slate-600 mb-6">
-                    <p><strong>Deleting roads:</strong> Never delete a road unless you are 100% certain it doesn't exist. Deleting a road deletes all traffic data — this cannot be recovered. If a road has been realigned, move/edit the existing segment.</p>
-                    <p><strong>Tracing from Google Maps:</strong> This is a copyright violation. Use Waze's satellite imagery and GPS tracks instead.</p>
-                    <p><strong>Excessive parking lot detail:</strong> Map the entrance, exit, and main internal lanes only. Don't draw every individual parking row. Over-detailed parking lots clutter the map.</p>
-                    <p><strong>Splitting roads unnecessarily:</strong> Do not split a two-way road into one-way pairs unless the physical road is a genuine divided carriageway. Unnecessary splits require heavy maintenance.</p>
-                    <p><strong>Setting direction to 'Unknown':</strong> Unknown direction should only exist on undriven base map roads. Always set a definite direction for any road you're actively editing.</p>
-                    <p><strong>Ignoring update requests:</strong> User-submitted update requests (URs) are real driver problems. Check them, investigate, and close them with an explanation — never close a UR without checking what it's about.</p>
-                </div>
-
-                <h3 class="text-lg font-bold mb-2 text-slate-900">SA-Specific Tips from the Community</h3>
-                <div class="space-y-4 text-sm text-slate-600 mb-6">
-                    <p><strong>1. Gated communities and private roads:</strong> South Africa has many gated communities, security estates, and complexes. These must be marked as Private Road type. Missing private road tags are a common source of URs.</p>
-                    <p><strong>2. Farm roads and 4x4 trails:</strong> Private farm roads and dedicated 4x4 trails serve no purpose for general commuters. Don't add them to Waze. If already mapped, use Street type with the Unpaved checkbox.</p>
-                    <p><strong>3. Roads renamed to honour new leaders:</strong> South Africa regularly renames roads. When renaming happens: change the primary name to the new name, add the old name as an alternate name until old signage is fully replaced. Primary name should always match current signage.</p>
-                    <p><strong>4. Municipal boundary changes:</strong> Don't use old municipality names. Many areas were consolidated into metros. Use the current municipal name — for example, Bryanston's city field should be 'Bryanston, Sandton', not 'Bryanston, Johannesburg'.</p>
-                    <p><strong>5. Connecting roads at junctions — the safe approach:</strong> Draw the junction, press Q (disallow all), press W (allow all), and manually restrict what's genuinely not allowed. This 10-second process prevents days of routing problems.</p>
-                    <p><strong>6. Scripts save time:</strong> WME Junction Angle Info shows what instruction a driver will hear at any junction. Use it constantly when creating new connections.</p>
-                </div>
-
-                <h3 class="text-lg font-bold mb-2 text-slate-900">Checking for Problems</h3>
-                <p class="mb-4 text-sm text-slate-600"><strong>Map Problems (automatic):</strong> Waze automatically flags: possible missing junctions, possible turn restrictions, and long unnamed segments. Check the Map Problems layer (Shift+P) regularly in your area.</p>
-                <p class="mb-6 text-sm text-slate-600"><strong>Update Requests (user-submitted):</strong> Users submit URs when the map is wrong or routing failed. Click the UR to see the description and location, test routing in Livemap, use conversations to communicate if needed, and close with an explanation once resolved.</p>
-
-                <h3 class="text-lg font-bold mb-2 text-slate-900">Quick Reference: Key Links</h3>
-                <div class="overflow-x-auto border border-slate-200 rounded-xl bg-white text-xs font-mono">
-                    <table class="w-full text-left border-collapse">
-                        <thead>
-                            <tr class="bg-slate-50 border-b border-slate-200 text-slate-600 font-semibold"><th class="p-2.5">Resource</th><th class="p-2.5">URL</th></tr>
-                        </thead>
-                        <tbody class="divide-y divide-slate-100 text-slate-700">
-                            <tr><td class="p-2.5 font-sans font-bold">SA Slack community</td><td class="p-2.5">wazeinternational.slack.com (channel: #south-africa)</td></tr>
-                            <tr><td class="p-2.5 font-sans font-bold">SA Waze Forums</td><td class="p-2.5">waze.com/discuss/c/4723</td></tr>
-                            <tr><td class="p-2.5 font-sans font-bold">Waze Map Editor</td><td class="p-2.5">waze.com/editor</td></tr>
-                            <tr><td class="p-2.5 font-sans font-bold">Waze Livemap</td><td class="p-2.5">waze.com/livemap</td></tr>
-                            <tr><td class="p-2.5 font-sans font-bold">SA Main Page</td><td class="p-2.5">waze.com/discuss/t/main-page/377466</td></tr>
-                            <tr><td class="p-2.5 font-sans font-bold">SA Toll Booths</td><td class="p-2.5">waze.com/discuss/t/toll-booths-and-plazas-south-africa/377483</td></tr>
-                            <tr><td class="p-2.5 font-sans font-bold">SA Abbreviations</td><td class="p-2.5">waze.com/discuss/t/abbreviations-and-acronyms-south-africa/377440</td></tr>
-                            <tr><td class="p-2.5 font-sans font-bold">SA Unlock Requests</td><td class="p-2.5">waze.com/discuss/c/4725</td></tr>
-                            <tr><td class="p-2.5 font-sans font-bold">WME Keyboard Shortcuts</td><td class="p-2.5">waze.com/discuss/t/keyboard-shortcuts/377445</td></tr>
-                            <tr><td class="p-2.5 font-sans font-bold">Global Best Practices</td><td class="p-2.5">wazeopedia.waze.com/wiki/Global/Best_map_editing_practice</td></tr>
-                            <tr><td class="p-2.5 font-sans font-bold">Waze Support</td><td class="p-2.5">support.google.com/waze</td></tr>
-                        </tbody>
-                    </table>
-                </div>
-            </section>
         </main>
     </div>
 
-    <footer class="bg-slate-900 text-slate-400 text-center py-6 border-t border-slate-800 text-xs mt-auto">
-        <p class="font-bold text-slate-300">Happy Wazing, South Africa! 🇿🇦</p>
-        <p class="mt-1">The work you do genuinely matters — a missing turn restriction or wrong one-way affects every commuter who drives that route.</p>
+    <footer class="bg-slate-900 text-slate-400 text-xs py-8 mt-20 border-t border-slate-800 text-center">
+        <p>&copy; 2026 Waze South Africa Map Editing Community. Built for Vercel & GitHub deployment.</p>
     </footer>
 
+    <script>
+        document.getElementById('searchInput').addEventListener('input', function(e) {
+            const searchTerm = e.target.value.toLowerCase();
+            const cards = document.querySelectorAll('.doc-card');
+            
+            cards.forEach(card => {
+                const text = card.textContent.toLowerCase();
+                if(text.includes(searchTerm)) {
+                    card.style.display = "block";
+                } else {
+                    card.style.display = "none";
+                }
+            });
+        });
+    </script>
 </body>
 </html>
