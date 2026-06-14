@@ -8,7 +8,7 @@
     <meta property="og:title" content="Waze Map Editor - South Africa Guide">
     <meta property="og:description" content="Your comprehensive guide to editing Waze maps in South Africa.">
     <meta property="og:type" content="website">
-    <meta name="theme-color" content="#000000">
+    <meta name="theme-color" content="#0099FF">
     <title>Waze Map Editor - South Africa Guide</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVJkECyjV1Jo2dMDC0UDAm3K5+yR6E3rnUQnk+e1T3pmU4fyhbIAtVay9NfsVf4hjdue8RN0w3w==" crossorigin="anonymous" referrerpolicy="no-referrer">
@@ -30,36 +30,41 @@
             scrollbar-gutter: stable;
         }
         
+        /* Custom azure background */
+        .bg-azure-dark {
+            background-color: #0099FF;
+        }
+        
         /* Focus styles for better accessibility */
         a:focus-visible,
         button:focus-visible,
         input:focus-visible {
-            outline: 2px solid #0099FF;
+            outline: 2px solid #ffffff;
             outline-offset: 2px;
         }
     </style>
 </head>
-<body class="bg-merino text-black font-sans antialiased">
+<body class="bg-merino text-white font-sans antialiased">
 
-    <header class="sticky top-0 z-50 bg-black text-white shadow-md border-b border-gray-900">
+    <header class="sticky top-0 z-50 bg-azure-dark text-white shadow-md border-b-2 border-blue-600">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
             <div class="flex items-center space-x-3 shrink-0">
-                <i class="fa-solid fa-map-location-dot text-azure text-2xl" aria-hidden="true"></i>
+                <i class="fa-solid fa-map-location-dot text-white text-2xl" aria-hidden="true"></i>
                 <span class="text-xl font-bold tracking-tight">
                     Waze Map Editor 
-                    <span class="text-azure font-medium text-sm px-2 py-0.5 rounded bg-gray-900 ml-1">ZA Edition</span>
+                    <span class="text-white font-medium text-sm px-2 py-0.5 rounded bg-blue-600 ml-1">ZA Edition</span>
                 </span>
             </div>
             <div class="relative flex-1 max-w-xs">
                 <label for="searchInput" class="sr-only">Search documentation</label>
                 <span class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                    <i class="fa-solid fa-magnifying-glass text-gray-400 text-sm" aria-hidden="true"></i>
+                    <i class="fa-solid fa-magnifying-glass text-gray-200 text-sm" aria-hidden="true"></i>
                 </span>
                 <input 
                     type="search" 
                     id="searchInput" 
                     placeholder="Search documentation..." 
-                    class="w-full pl-9 pr-4 py-1.5 bg-gray-900 border border-gray-800 rounded-md text-sm text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-azure focus:border-transparent"
+                    class="w-full pl-9 pr-4 py-1.5 bg-blue-600 border border-blue-700 rounded-md text-sm text-white placeholder-gray-200 focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent"
                     aria-label="Search documentation">
             </div>
         </div>
@@ -101,10 +106,10 @@
         <main class="flex-1 min-w-0" id="contentArea" role="main">
             
             <section class="mb-16 border-b border-gray-300 pb-16">
-                <div class="bg-black rounded-2xl p-8 text-white mb-12 shadow-md border border-gray-900">
-                    <span class="text-azure font-semibold tracking-wider uppercase text-xs">Module 01</span>
+                <div class="bg-azure-dark rounded-2xl p-8 text-white mb-12 shadow-md border border-blue-600">
+                    <span class="text-white font-semibold tracking-wider uppercase text-xs">Module 01</span>
                     <h1 class="text-3xl font-extrabold tracking-tight mt-1 mb-4">The South Africa Waze Map Editor Guide Blueprint</h1>
-                    <p class="text-gray-300 max-w-2xl text-base leading-relaxed">Your foundations and core philosophy before moving pixels. Understand why precise mapping matters for local South Africa routes, emergency services, and community coordination.</p>
+                    <p class="text-gray-100 max-w-2xl text-base leading-relaxed">Your foundations and core philosophy before moving pixels. Understand why precise mapping matters for local South Africa routes, emergency services, and community coordination.</p>
                 </div>
 
                 <div id="bp-impact" class="doc-card mb-12 scroll-mt-24">
@@ -243,10 +248,10 @@
 
 
             <section>
-                <div class="bg-black rounded-2xl p-8 text-white mb-12 shadow-md border border-gray-900">
-                    <span class="text-azure font-semibold tracking-wider uppercase text-xs">Module 02</span>
+                <div class="bg-azure-dark rounded-2xl p-8 text-white mb-12 shadow-md border border-blue-600">
+                    <span class="text-white font-semibold tracking-wider uppercase text-xs">Module 02</span>
                     <h1 class="text-3xl font-extrabold tracking-tight mt-1 mb-4">Wazeopedia South Africa: Reference Guide</h1>
-                    <p class="text-gray-300 max-w-2xl text-base leading-relaxed">Practical documentation on properties, interface layouts, speed limits, and advanced editing patterns across local provinces.</p>
+                    <p class="text-gray-100 max-w-2xl text-base leading-relaxed">Practical documentation on properties, interface layouts, speed limits, and advanced editing patterns across local provinces.</p>
                 </div>
 
                 <div id="guide-start" class="doc-card mb-12 scroll-mt-24">
@@ -365,9 +370,9 @@
                         </table>
                     </div>
 
-                    <div class="bg-black text-white p-5 rounded-xl text-sm shadow-md border border-gray-900">
-                        <h4 class="font-bold text-azure mb-2"><i class="fa-solid fa-map-pin" aria-hidden="true"></i> Suburb Assignment Rule</h4>
-                        <p class="leading-relaxed text-xs text-gray-300">Always follow the <strong>"Suburb, City"</strong> pattern in the address field to keep alerts clean (e.g., <em>"Morningside, Sandton"</em> not "Sandton" alone).</p>
+                    <div class="bg-azure-dark text-white p-5 rounded-xl text-sm shadow-md border border-blue-600">
+                        <h4 class="font-bold text-white mb-2"><i class="fa-solid fa-map-pin" aria-hidden="true"></i> Suburb Assignment Rule</h4>
+                        <p class="leading-relaxed text-xs text-gray-100">Always follow the <strong>"Suburb, City"</strong> pattern in the address field to keep alerts clean (e.g., <em>"Morningside, Sandton"</em> not "Sandton" alone).</p>
                     </div>
                 </div>
 
@@ -446,7 +451,7 @@
         </main>
     </div>
 
-    <footer class="bg-black text-gray-400 text-xs py-8 mt-20 border-t border-gray-900 text-center" role="contentinfo">
+    <footer class="bg-azure-dark text-gray-100 text-xs py-8 mt-20 border-t-2 border-blue-600 text-center" role="contentinfo">
         <p>&copy; 2026 Waze South Africa Map Editing Community. Built for Vercel & GitHub deployment.</p>
     </footer>
 
